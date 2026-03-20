@@ -3,9 +3,6 @@
     background-repeat: no-repeat;
     width: 200px;
     height: 150px;}
-    .navbar{
-        background-color: rgb(99, 157, 219);
-    }
 .Products{
     display: flex;
     flex-wrap: wrap;
@@ -29,18 +26,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-}
-
-
-table{
-    width: 90%;
-    margin: 20px auto;
-    border-collapse: collapse;
-}
-th, td{
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
 }
 
 .brand-name{
