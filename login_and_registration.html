@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Register - UniShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="site-header">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="About_us.html">About Us</a>
+            <a href="academic_supplies.html">Academic Supplies</a>
+            <a href="medical-items.html">Medical Items</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-container">
+            <h2 class="brand-name">UniShop</h2>
+            <div class="logo"></div>
+        </div>
+    </div>
 
+    <div class="main-container">
+        
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Login</legend>
+                <label>Username:</label>
+                <input type="text" name="username" required>
+                <label>Password:</label>
+                <input type="password" name="password" required>
+                <input type="submit" value="Login Now">
+            </fieldset>
+        </form>
+
+        <form action="https://httpbin.org/get" method="get">
+            <fieldset>
+                <legend>Registration</legend>
+                <label>Full Name:</label>
+                <input type="text" name="fullname" required>
+                
+                <label>Email:</label>
+                <input type="email" name="email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="user_phone" placeholder="968-XXXX-XXXX" pattern="[0-9]{8}" required>
+
+                <p>Student Status:</p>
+                <input type="radio" id="ft" name="status" value="full-time" checked>
+                <label for="ft">Full-time</label>
+                <input type="radio" id="pt" name="status" value="part-time">
+                <label for="pt">Part-time</label>
+
+                <input type="submit" value="Register Account">
+            </fieldset>
+        </form>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 UniShop - Bright Minds Team</p>
+    </footer>
+</body>
+</html>
