@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - UniShop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <div class="site-header">
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="About_us.html">About Us</a>
+            <a href="academic_supplies.html">Academic Supplies</a>
+            <a href="medical-items.html">Medical Items</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-container">
+            <h2 class="brand-name">UniShop</h2>
+            <div class="logo"></div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="contact-info" style="max-width: 400px;">
+            <h2>Get in Touch</h2>
+            <p>We are here to help you with your academic needs.</p>
+            <ul>
+                <li><strong>Email:</strong> support@unishop.com</li>
+                <li><strong>Phone:</strong> +968 2414 0000</li>
+                <li><strong>Office:</strong> SQU Student Center</li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://httpbin.org/get" method="get">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <label>Full Name:</label>
+                    <input type="text" name="name" required>
+                    
+                    <label>Subject:</label>
+                    <select name="subject">
+                        <option>General Inquiry</option>
+                        <option>Order Issue</option>
+                    </select>
+
+                    <label>Message:</label>
+                    <textarea name="message" rows="4"></textarea>
+
+                    <input type="submit" value="Send Message">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 UniShop - Bright Minds Team</p>
+    </footer>
+</body>
+</html>
