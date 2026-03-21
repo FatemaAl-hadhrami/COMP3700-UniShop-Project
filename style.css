@@ -365,3 +365,39 @@ input[type="submit"]:hover {
     color: #2d2d2d;
 }
 
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 32px; 
+    color: black;
+}
+
+.logo {
+    background-image: url("images/logo.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 60px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; 
+    background-color: #f4f8fd;
+}
+
+fieldset {
+    padding: 15px; 
+    min-width: 280px;
+}
