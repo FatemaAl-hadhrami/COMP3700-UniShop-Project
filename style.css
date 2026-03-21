@@ -359,3 +359,38 @@ input[type="submit"]:hover {
     color: #2d2d2d;
 }
 
+.site-header {
+    width: 100%;
+    background-color: white;
+}
+
+.navbar {
+    background-color: #5da0db; 
+    padding: 8px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px; 
+    background-color: #f4f8fd;
+}
+
+.contact-form-container {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 0 20px;
+}
+
+
