@@ -28,13 +28,14 @@
     padding: 10px;
 }
 .site-header {
-    background-color: rgb(99, 157, 219);
-    color: white;
+    background-color: white;
+    color: black;
+    
 }
 .brand-name{
     margin:0;
     font-size: 45px;
-    color: white;
+    
 }
 .site-footer{
     background-color: rgb(99, 157, 219);
@@ -151,6 +152,7 @@ body {
     gap: 30px;
     background-color: rgb(99, 157, 219);
     padding: 18px 10px;
+    color: black;
 }
 
 .navbar a {
@@ -159,6 +161,7 @@ body {
     font-weight: bold;
     font-family: Arial, sans-serif;
     font-size: 18px;
+    
 }
 
 .navbar a:hover {
