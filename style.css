@@ -144,7 +144,25 @@ body {
   height: 18px;
   border-radius: 50%;
   display: flex; justify-content: center}
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: rgb(99, 157, 219);
+    padding: 18px 10px;
+}
 
+.navbar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #e6f2ff;
+}
 nav a { color: lightblue; }
 nav a:link    { color: lightblue; }
 nav a:visited { color: lightblue; }
