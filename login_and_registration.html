@@ -6,26 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="header-logo">
-      <a href="index.html">
-        <img src="UniShop_logo.png" alt="UniShop - Your Campus Store" />
-      </a>
-    </div>
-    <div class="header-search">
-      <form action="https://httpbin.org/get" method="get">
-        <input type="text" name="query" />
-        <input type="submit" value="Search" />
-      </form>
-    </div>
-    <div class="header-actions">
-      <a href="login_and_registration.html">Login / Register</a>
-      <a href="cart.html" class="cart-link" style="font-size:26px; position:relative; padding:4px;">
-        🛒
-        <span class="cart-count">0</span>
-      </a>
-    </div>
-    </header>
     <div class="site-header">
         <nav class="navbar">
             <a href="index.html">Home</a>
@@ -33,9 +13,6 @@
             <a href="academic_supplies.html">Academic Supplies</a>
             <a href="medical-items.html">Medical & Laboratory Items</a>
             <a href="contact_us.html">Contact Us</a>
-            <a href="cart.html">My cart</a>
-            <a href="login_and_registration.html">Login</a>
-            <a href="order_tracking.html">Order Tracking</a>
         </nav>
         <div class="header-container">
             <h2 class="brand-name">UniShop</h2>
@@ -60,29 +37,36 @@
             </fieldset>
         </form>
 
-        <form action="https://httpbin.org/get" method="get">
-            <fieldset>
-                <legend>Registration</legend>
-                <label>Full Name:</label>
-                <input type="text" name="fullname" required style="margin-bottom: 5px;">
-                
-                <label>Email:</label>
-                <input type="email" name="email" required style="margin-bottom: 5px;">
+  <div class="form-container-box">
+    <form action="#">
+        <fieldset>
+            <legend>Registration</legend>
+            <label>Full Name:</label>
+            <input type="text" name="fullname">
+            
+            <label>College/Faculty:</label>
+            <select name="college">
+                <option>Engineering</option>
+                <option>Science</option>
+                <option>Medicine</option>
+            </select>
 
-                <div style="font-size: 13px;">
-                    <p style="margin: 5px 0;">Student Status: 
-                        <input type="radio" id="ft" name="status" value="full-time" checked> <label for="ft">Full-time</label>
-                        <input type="radio" id="pt" name="status" value="part-time"> <label for="pt">Part-time</label>
-                    </p>
-                </div>
-                <input type="submit" value="Register Account">
-            </fieldset>
-        </form>
-    </div>
+            <label>Password:</label>
+            <input type="password" name="pass">
+            
+            <label>Confirm Password:</label>
+            <input type="password" name="confirm_pass">
+
+            <label>
+                <input type="checkbox" name="terms"> I agree to Terms & Conditions
+            </label>
+            
+            <input type="submit" value="Register Account">
+        </fieldset>
+    </form>
+  </div>
 
     <footer class="site-footer">
         <p>&copy; 2026 UniShop - Bright Minds Team</p>
     </footer>
 </body>
-</body>
-</html>
