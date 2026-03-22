@@ -89,7 +89,13 @@ body {
   background: #ffffff;
   line-height: 1.6;
 }
-.header-logo img {height: 150px;}
+header {
+  display: flex;
+  align-items: center;
+  padding: 18px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
 .header-search {
   flex: 1;
   max-width: 500px;
