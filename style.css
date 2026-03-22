@@ -405,11 +405,148 @@ input[type="submit"]:hover {
     padding: 20px; 
     background-color: #f4f8fd;
 }
-
 .contact-form-container {
     max-width: 600px; 
     margin: 20px auto; 
     padding: 0 20px;
 }
-
+.hero-compact {
+  padding: 40px 60px;
+}
+ 
+.track-form-card {
+  border: 0;
+  border-radius: 14px;
+  background: #f4f8fd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.track-card-title {
+  color: #1e3a6e;
+}
+ 
+.track-label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #1e3a6e;
+}
+.btn-track {
+  background: #1e3a6e;
+  border-color: #1e3a6e;
+  color: #ffffff;
+  font-weight: bold;
+  height: 44px;
+}
+.btn-track:hover {
+  background: #4a8fd4;
+  border-color: #4a8fd4;
+  color: #ffffff;
+}
+.order-summary-card {
+  border: 2px solid #dce8f5;
+  border-radius: 14px;
+}
+.order-id-title {
+  color: #1e3a6e;
+  font-size: 20px;
+}
+.badge-status {
+  font-size: 13px;
+} 
+.order-meta-row {
+  border-top: 1px solid #dce8f5;
+  padding-top: 12px;
+}
+.meta-label {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b7280;
+}
+.meta-value {
+  font-size: 14px;
+}
+.tracking-card {
+  border: 2px solid #dce8f5;
+  border-radius: 14px;
+}
+.step-counter {
+  font-size: 13px;
+  color: #6b7280;
+} 
+.step-done {
+  border-left: 4px solid #1e3a6e;
+} 
+.step-title-done {
+  font-size: 14px;
+  color: #1e3a6e;
+} 
+.step-active {
+  border-left: 4px solid #4a8fd4;
+  background: #e8f1fb;
+} 
+.step-title-active {
+  font-size: 14px;
+  color: #4a8fd4;
+}
+.badge-active {
+  font-size: 11px;
+}
+.step-pending {
+  border-left: 4px solid #dce8f5;
+  opacity: 0.5;
+}
+.step-title-pending {
+  font-size: 14px;
+  color: #9ca3af;
+}
+.step-desc {
+  font-size: 12px;
+  color: #6b7280;
+}
+.step-desc-pending {
+  font-size: 12px;
+  color: #9ca3af;
+}
+.step-time {
+  font-size: 11px;
+  white-space: nowrap;
+  color: #6b7280;
+}
+.eta-card {
+  border: 2px solid #dce8f5;
+  border-radius: 14px;
+  background: #f4f8fd;
+}
+.eta-date {
+  color: #1e3a6e;
+  font-size: 20px;
+} 
+.eta-time {
+  font-size: 13px;
+  color: #6b7280;
+}
+.order-table-head {
+  background: #1e3a6e;
+  color: #ffffff;
+} 
+.subtotal-cell {
+  color: #1e3a6e;
+}
+.order-total-box {
+  background: #f4f8fd;
+  border: 2px solid #dce8f5;
+  border-radius: 12px;
+}
+.total-row-border {
+  border-bottom: 1px solid #dce8f5;
+  font-size: 14px;
+  color: #2d2d2d;
+}
+.total-grand {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e3a6e;
+}
 
