@@ -19,6 +19,26 @@
     </style>
 </head>
 <body>
+    <header>
+    <div class="header-logo">
+      <a href="index.html">
+        <img src="UniShop_logo.png" alt="UniShop - Your Campus Store" />
+      </a>
+    </div>
+    <div class="header-search">
+      <form action="https://httpbin.org/get" method="get">
+        <input type="text" name="query" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+    <div class="header-actions">
+      <a href="login_and_registration.html">Login / Register</a>
+      <a href="cart.html" class="cart-link" style="font-size:26px; position:relative; padding:4px;">
+        🛒
+        <span class="cart-count">0</span>
+      </a>
+    </div>
+    </header>
     <nav class="navbar">
         <a href="index.html"> Home </a>
         <a href="About_us.html"> About us </a>
