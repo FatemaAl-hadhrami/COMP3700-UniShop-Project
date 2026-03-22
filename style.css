@@ -1,8 +1,8 @@
 .logo{background-image:url("images/logo.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 200px;
-    height: 150px;}
+    width: 300px;
+    height: 300px;}
 .Products{
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +89,7 @@ body {
   background: #ffffff;
   line-height: 1.6;
 }
-.header-logo img {height: 70px;}
+.header-logo img {height: 150px;}
 .header-search {
   flex: 1;
   max-width: 500px;
