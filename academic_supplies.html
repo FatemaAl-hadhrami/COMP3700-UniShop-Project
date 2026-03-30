@@ -4,138 +4,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Supplies</title>
-    <link rel="stylesheet" href="style.css">
-  <style>
   
-  </style>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+crossorigin="anonymous"></script>
+<script type="text/javascript">
+  function validateSearch(){
+      let searchBox = document.getElementById("searchInput");
+      if (searchBox.value == "") {
+        alert("Please enter a search word");
+        searchBox.focus();
+        return false;
+
+      }
+      return true;
+
+    }
+
+  
+</script>
 </head>
-<body>
-    <header>
-    <p>UniShop</p>
-    <div class="header-logo">
-      <a href="index.html">
-        <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" />
+<body class="bg-light">
+    <header class="container-fluid bg-white" >
+     <div class="row align-items-center p-4" >
+      <div class="col-md-2">
+        <p class="h3 text-primary">UniShop</p>
+        <a href="index.html">
+        <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" class="img-fluid" />
       </a>
-    </div>
-    <div class="header-search">
-      <form action="https://httpbin.org/get" method="get">
-        <input type="text" name="query" />
-        <input type="submit" value="Search" />
+      </div>
+         <div class="col-md-6">
+      <form action="https://httpbin.org/get" method="get" onsubmit="return validateSearch()">
+       <div class="row">
+            <div class="col-8">
+        <input type="text" id="searchInput" name="query" class="form-control"/>
+            </div>
+            <div class="col-4">
+        <input type="submit" value="Search" class="btn btn-primary" />
+      </div>
+      </div>
       </form>
-    </div>
-    <div class="header-actions">
-      <a href="login_and_registration.html">Login / Register</a>
-      <a href="cart.html" class="cart-link" style="font-size:26px; position:relative; padding:4px;">
+    
+     </div>
+  
+    
+ <div class="col-md-4 text-end">
+
+      <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
+      <a class="btn btn-outline-primary fs-4" href="cart.html"  >
         🛒
-        <span class="cart-count">0</span>
+        <span class="text-danger">0</span>
       </a>
     </div>
+     </div>
     </header>
-   <div class="site-header">
-    
-    
-    
-    <nav class="navbar">
-            <a href="index.html">Home</a>
-    
-            <a href="About_us.html">About Us</a>
+
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+           <div class="container-fluid">
+      <div class="navbar-nav">
+
+      <a class="nav-link"  href="index.html">Home</a>
+          
+            <a class="nav-link" href="About_us.html">About Us</a>
            
-            <a href="academic_supplies.html">Academic Supplies</a>
+            <a  class="nav-link active" href="academic_supplies.html">Academic Supplies</a>
            
-            <a href="medical-items.html">Medical & Laboratory Items</a>
+            <a class="nav-link"  href="medical-items.html">Medical & Laboratory Items</a>
           
-            <a href="contact_us.html">Contact Us</a>
-            <a href="cart.html">My cart</a>
-            <a href="login_and_registration.html">Login</a>
-            <a href="order_tracking.html">Order Tracking</a>
-        </nav>
-
-
-    <h1>Academic Supplies</h1>
-
-   <h3>Available Supplies</h3>
-   <ul>
-    <li>Pens and pencils</li>
-    <li>Notebooks and study notes</li>
-    <li>Calculators</li>
-    <li>Bags</li>
-   </ul>
-    <div class="Products">
-        <div class="product-card">
-            <img src="images/ballpoint-pens.png" alt="Pens">
-            <h4>Pens</h4>
-            <p>Black, purple, green, orange, red, pink, light-blue, dark-blue</p>
-            <p class="price">0.650 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-         <div class="product-card">
-            <img src="images/One_140pages_notebool.png" alt="One book">
-            <h4>Single book</h4>
-            <p>140-page single blue notebook</p>
-            <p class="price">0.800 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-         <div class="product-card">
-            <img src="images/200pages_4_notebooks.jpg" alt="4 Note books">
-            <h4>Pack of 4 notebooks</h4>
-            <p>A pack of 4 (pink, beige, green, and gray) notebooks each with 200 pages</p>
-            <p class="price">1.200 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-         <div class="product-card">
-            <img src="images/Casio_fx9911es_plus_scientific_calc.jpg" alt="scientific Calculators">
-            <h4>fx-9911ES PLUS scientific calculator</h4>
-            <p class="price">4.000 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-           <div class="product-card">
-            <img src="images/Casio_fx82es_plus_scientific_calc.png" alt="scientific Calculators">
-            <h4>fx-82ES PLUS scientific calculator</h4>
-            <p class="price">2.150 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-
-       
-           <div class="product-card">
-            <img src="images/web_study_notes.png" alt="Study notes">
-            <h4>Study Notes for Web Computing</h4>
-            <p class="price">0.300 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-          
-           <div class="product-card">
-            <img src="images/back_pack.jpg" alt="Backpack">
-            <h4>Gray backpack</h4>
-            <p class="price">1.000 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-          
-          
-           <div class="product-card">
-            <img src="images/lap_top_bag_15.6Inches.jpg" alt="Laptop bag">
-            <h4>Black laptop bag 15.6 inches</h4>
-            <p class="price">1.000 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
-            
-           <div class="product-card">
-            <img src="images/Tote_bag.jpg" alt="Tote bag">
-            <h4>Brown tote bag</h4>
-            <p class="price">0.900 OMR</p>
-            <a href="cart.html" class="btn">Add to cart</a>
-        
-        </div>
+            <a  class="nav-link" href="contact_us.html">Contact Us</a>
+            <a  class="nav-link" href="cart.html">My Cart</a>
+            <a class="nav-link"  href="login_and_registration.html">Login</a>
+            <a  class="nav-link" href="order_tracking.html">Order Tracking</a>
+             <a  class="nav-link" href="questionnaire.html">Questionnaire</a>
+             <a  class="nav-link" href="calculator.html">Calculator</a>
+            <a  class="nav-link" href="funpage.html">Fun Page</a>
+              </div>
     </div>
-     <footer class="site-footer">
-        <p>&copy; 2026 UniShop. All rights reserved.</p>
-    </footer>
+
+          </nav>
+
+      <div class="container mt-4 mb-4">
+
+    <h1 class="mb-3">Academic Supplies</h1>
+   
+   <h3>Available Supplies</h3>
+   <ul class="list-group mb-4">
+    <li class="list-group-item">Pens and pencils</li>
+    <li class="list-group-item">Notebooks and study notes</li>
+    <li class="list-group-item">Calculators</li>
+    <li class="list-group-item">Bags</li>
+   </ul>
+   <br/>
+    <div class="row g-4">
+
+      <div class="col-md-4 col-lg-3">
+     
+      <div class="card h-100">
+    <img src="images/ballpoint-pens.png" class="card-img-top" alt="pens" width="240" height="210" >
+           <div class="card-body text-center">
+
+            <h4 class="card-title">Pens</h4>
+            <p class="card-text">Black, purple, green, orange, red, pink, light-blue, dark-blue</p>
+            <p class="text-primary">0.650 OMR</p>
+            <a href="cart.html" class="btn btn-primary">Add to cart</a>
+        
+        </div>
+           </div>
+      </div>
+        <div class="col-md-4 col-lg-3">
+        <div class="card h-100">
+
+           <img  src="images/One_140pages_notebool.png" alt="One book" class="card-img-top" width="240" height="210">
+          <div  class="card-body text-center">
+          <h4  class="card-title">Single book</h4>
+          <p class="card-text">140-page single blue notebook</p>
+             <p  class="text-primary"><b>0.800 OMR</b></p>
+           <a  href="cart.html" class="btn btn-primary">Add to cart</a>
+      </div>
+        </div>
+         </div>
+         <div class ="col-md-4 col-lg-3">
+        <div class ="card h-100">
+          <img src ="images/200pages_4_notebooks.jpg" alt="4 Note books" class="card-img-top" width="240" height="210">
+          <div class ="card-body text-center">
+            <h4 class = "card-title">Pack of 4 notebooks</h4>
+            <p class ="card-text"  >A pack of 4 notebooks each with 200 pages</p>
+            <p class = "text-primary"><b>1.200 OMR</b></p>
+            <a href  ="cart.html"  class ="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="images/Casio_fx9911es_plus_scientific_calc.jpg" alt="scientific Calculators" class="card-img-top" width="240" height="210" >
+       <div class="card-body text-center">
+         <h4 class="card-title">fx-9911ES PLUS scientific calculator</h4>
+          <p class="text-primary"><b>4.000 OMR</b></p>
+         <a href="cart.html" class="btn btn-primary">Add to cart</a>
+          </div>
+           </div>
+          </div>
+        </div>
+    <br/>
+
+    <div class="row g-4">
+   <div class="col-md-4 col-lg-3">
+     <div class="card h-100">
+         <img src="images/Casio_fx82es_plus_scientific_calc.png" alt="scientific Calculators" class="card-img-top"  width="240" height="210">
+          <div class="card-body text-center">
+            <h4 class="card-title">fx-82ES PLUS scientific calculator</h4>
+        <p class="text-primary"><b>2.150 OMR</b></p>
+              <a href="cart.html" class="btn btn-primary">Add to cart</a>
+          </div>
+      </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100">
+        <img src = "images/web_study_notes.png" alt="Study notes" class="card-img-top" width="240" height="210">
+          <div class= "card-body text-center">
+         <h4 class= "card-title">Study Notes for Web Computing</h4>
+          <p  class="text-primary"><b>0.300 OMR</b></p>
+         <a  href="cart.html" class="btn btn-primary">Add to cart</a>
+          </div>
+      </div>
+      </div>
+
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100">
+          <img src="images/back_pack.jpg" alt="Backpack" class="card-img-top" width="240" height="210">
+         <div class="card-body text-center">
+         <h4 class="card-title">Gray backpack</h4>
+            <p class="text-primary"><b>1.000 OMR</b></p>
+        <a href="cart.html" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+         </div>
+      <div  class="col-md-4 col-lg-3">
+        <div   class="card h-100">
+          <img src="images/lap_top_bag_15.6Inches.jpg" alt="Laptop bag" class="card-img-top" width="240" height="210">
+    <div class="card-body text-center">
+        <h4  class="card-title">Black laptop bag 15.6 inches</h4>
+         <p   class="text-primary"><b>1.000 OMR</b></p>
+     <a href="cart.html" class="btn btn-primary">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <div class="row g-4">
+      <div class="col-md-4 col-lg-3">
+        <div class="card h-100">
+       <img src="images/Tote_bag.jpg" alt="Tote bag" class="card-img-top" width="240" height="210">
+          <div class="card-body text-center">
+    <h4 class="card-title">Brown tote bag</h4>
+          <p class="text-primary" ><b>0.900 OMR</b></p>
+              <a  href= "cart.html" class="btn btn-primary">Add to cart</a>
+          </div>
+          </div>
+          </div>
+        </div>
+        
+
+  <footer class="bg-primary text-white text-center py-3">
+    <p  class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
+  </footer>
 </body>
 </html>
