@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - UniShop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+    function validateSearch(){
+      let searchBox = document.getElementById("searchInput"); 
+      if (searchBox.value == "") {
+        alert("Please enter a search word");
+        searchBox.focus();
+        return false;
+      }
+        return true;
+    }
+    function validReview(){
+        let emailadd = document.getElementById("email"); 
+        let username = document.getElementById("name");
+        var radios;
+        var x = 0;
+        checker = false;
+        //alert if email field is empty and focus on email
+        if (emailadd.value == ""){
+            alert("Please enter a valid email address.");
+            emailadd.focus();
+            return false;
+        }
+        //alert if email format is incorrect and focus on email
+        if (emailadd.value.indexOf("@", 0) < 0){
+            alert("Please enter a valid email address.");
+            emailadd.focus();
+            return false;
+        }
+        //alert if email format is incorrect and focus on email
+        if (emailadd.value.indexOf(".", 0) < 0){
+            alert("Please enter a valid email address.");
+            emailadd.focus();
+            return false;
+        }
+        //alert if username field is empty and focus on username 
+        if (username.value == ""){
+            alert("Please enter your full name.");
+            username.focus();
+            return false;
+        }
+        //alert if no option for gender is selected
+        radios = document.getElementsByName("Gender");
+        if (radiochecker(radios) == false){
+            return false;
+        }
+        //alert if no options were selected for rating layout of the website
+        radios = document.getElementsByName("Layout");
+        if (radiochecker(radios) == false){
+            return false;
+        }
+        //alert if no options were selected for rating navigation
+        radios = document.getElementsByName("navease");
+        if (radiochecker(radios) == false){
+            return false;
+        }
+        //alert if no options were selected for rating design of the website
+        radios = document.getElementsByName("design");
+        if (radiochecker(radios) == false){
+            return false;
+        }
+        //alert if no options were selected for rating product quality
+        radios = document.getElementsByName("prod");
+        if (radiochecker(radios) == false){
+            return false;
+        }
+        //alert if no options were selected for rating delivery services
+        radios = document.getElementsByName("delivery");
+        if (radiochecker(radios) == false){
+            return false;
+        }
+        //alert if no options were selected for rating customer service 
+        radios = document.getElementsByName("custom");
+        if (radiochecker(radios) == false){
+            return false;
+        }
+        return true;
+
+    } 
+
+    //function to check radio button groups and alert if no options are chosen
+    function radiochecker(radiogroup){
+        checker = false;
+        for (let radio of radiogroup){
+            if (radio.checked){
+                checker = true;
+                break;
+            }
+        }
+        if(checker == false){
+            alert("Please select an option.");
+            radios.focus();
+        }
+        return checker;
+    }
+
+    //show the selected age group from the dropdown menu
+    function ageselect(agegroup){
+        const agedisplay = document.getElementById("ageGroup");
+        agedisplay.innerText = agegroup;
+    }
+    </script>
+  
+</head>
+<body class="bg-light">
+    <header class="container-fluid bg-white">
+        <div class="row align-items-center p-4">
+             <div class="col-md-2">
+                 <p class="h3 text-primary">UniShop</p>
+                  <a href="index.html">
+                      <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" class="img-fluid" />
+                  </a>
+             </div>
+            <div class="col-md-6">
+                <form action="https://httpbin.org/get" name="searchForm"method="get" onsubmit="return validateSearch()">
+                    <div class="row">
+                         <div class="col-8">
+                             <input type="text" id="searchInput" name="query" class="form-control"/>
+                         </div>
+                        <div class="col-4">
+                             <input type="submit" value="Search" class="btn btn-primary" />
+                        </div>
+                   </div>
+                </form>
+            </div>
+            <div class="col-md-4 text-end">
+                <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
+                <a class="btn btn-outline-primary fs-4" href="cart.html"  >
+                    🛒
+                    <span class="text-danger">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <div class="container-fluid">
+            <div class="navbar-nav">
+                <a class="nav-link"  href="index.html">Home</a>
+                <a class="nav-link" href="About_us.html">About Us</a>
+                <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
+                <a class="nav-link"  href="medical-items.html">Medical & Laboratory Items</a>
+                <a class="nav-link" href="contact_us.html">Contact Us</a>
+                <a class="nav-link" href="cart.html">My Cart</a>
+                <a class="nav-link"  href="login_and_registration.html">Login</a>
+                <a class="nav-link" href="order_tracking.html">Order Tracking</a>
+                <a class="nav-link active" href="questionnaire.html">Questionnaire</a>
+                <a class="nav-link" href="calculator.html">Calculator</a>
+                <a class="nav-link" href="funpage.html">Fun Page</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4 mb-4">
+      <h1 class="container mb-3 text-primary">Questionnaire</h1>
+      <p>Complete a short survey to help us meet your needs better. We appreciate each and every customer at UniShop.</p>
+      <form action="" name="info" onsubmit="return validReview()">
+        <fieldset>
+            <br>
+          <legend>User Information</legend>
+          <label for="user">Full Name:</label>
+          <div class="col-sm-8">
+            <input type="text" name="user" id="name">
+          </div>
+          <br>
+          <label for="email">Email Address:</label>
+          <div class="col-sm-8">
+            <input type="email" name="address" id="email">
+          </div>
+   
+        <br>
+        <legend>Gender:</legend>
+        <div class="row">
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" id="Female" value="Female">
+        </div>
+        <div class="row">
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" id="Male" value="Male">
+        </div>
+        <div class="row">
+            <label for="notMentioned">Prefer not to say</label>
+            <input type="radio" name="Gender" id="notMentioned" value="notMentioned">
+        </div>
+        <br>
+
+          <div class="dropdown col-5" >
+            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" id="ageGroup">Age group</button>
+            <ul class="dropdown-menu">
+              <li value="student" onclick="ageselect('18-25')">18-25</li>
+              <li value="older" onclick="ageselect('25-40')">25-40</li>
+              <li value="elder" onclick="ageselect('40+')">40+</li>
+            </ul>
+          </div>
+          <br>
+          <table class="table table-sm table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>Online Features</th>
+                    <th>Very Good</th>
+                    <th> Good</th>
+                    <th>Neutral</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>User-friendly Layout</td>
+                    <td><input type="radio" name="Layout" value="Layout"></td>
+                    <td><input type="radio" name="Layout" value="Layout"></td>
+                    <td><input type="radio" name="Layout" value="Layout"></td>
+                    <td><input type="radio" name="Layout" value="Layout"></td>
+                    <td><input type="radio" name="Layout" value="Layout"></td>
+                </tr>
+                <tr>
+                    <td>Navigation</td>
+                    <td><input type="radio" name="navease" value="navease"></td>
+                    <td><input type="radio" name="navease" value="navease"></td>
+                    <td><input type="radio" name="navease" value="navease"></td>
+                    <td><input type="radio" name="navease"  value="navease"></td>
+                    <td><input type="radio" name="navease" value="navease"></td>
+                </tr>
+                <tr>
+                    <td>Design</td>
+                    <td><input type="radio" name="design" value="design" ></td>
+                    <td><input type="radio" name="design" value="design"></td>
+                    <td><input type="radio" name="design" value="design"></td>
+                    <td><input type="radio" name="design" value="design"></td>
+                    <td><input type="radio" name="design" value="design"></td>
+                </tr>
+                <tr> <th>Products & Services</th></tr>
+                <tr>
+                    <td>Products Quality and Functionality</td>
+                    <td><input type="radio" name="prod" value="prod"></td>
+                    <td><input type="radio" name="prod" value="prod"></td>
+                    <td><input type="radio" name="prod" value="prod"></td>
+                    <td><input type="radio" name="prod" value="prod"></td>
+                    <td><input type="radio" name="prod" value="prod"></td>
+                </tr>
+                <tr>
+                    <td>Delivery Time and Conditions</td>
+                    <td><input type="radio" name="delivery" value="delivery"></td>
+                    <td><input type="radio" name="delivery" value="delivery" ></td>
+                    <td><input type="radio" name="delivery" value="delivery"></td>
+                    <td><input type="radio" name="delivery" value="delivery"></td>
+                    <td><input type="radio" name="delivery" value="delivery"></td>
+                </tr>
+                <tr>
+                    <td>Customer Services</td>
+                    <td><input type="radio" name="custom" value="custom"></td>
+                    <td><input type="radio" name="custom" value="custom"></td>
+                    <td><input type="radio" name="custom" value="custom"></td>
+                    <td><input type="radio" name="custom" value="custom"></td>
+                    <td><input type="radio" name="custom" value="custom"></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br>
+        <div class="container">
+            <label for="suggestions">Products you would like to see in UniShop:</label>
+            <textarea id = "suggestions" class="container-fluid"></textarea>
+        </div>
+        <br>
+        
+        <div class="container">
+            <label class="h3 text-primary">How Can We Improve?</label>
+            <textarea id ="comment" name="comment" class="container-fluid"></textarea>
+        </div>    
+        <br>
+        <input type="submit" class="bg-primary text-white" value="Submit">
+        </fieldset>      
+      </form>
+      <br>
+    </div>
+    <footer class="bg-primary text-white text-center py-3">
+    <p  class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
+  </footer>
+</body>
+</html>
