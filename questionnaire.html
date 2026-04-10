@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,6 +56,11 @@ crossorigin="anonymous"></script>
         if (username.value == ""){
             alert("Please enter your full name.");
             username.focus();
+            return false;
+        }
+        //alert if no option for job is selected
+        radios = document.getElementsByName("job");
+        if (radiochecker(radios) == false){
             return false;
         }
         //alert if no option for gender is selected
@@ -111,6 +122,11 @@ crossorigin="anonymous"></script>
     function ageselect(agegroup){
         const agedisplay = document.getElementById("ageGroup");
         agedisplay.innerText = agegroup;
+    }
+    //change html content
+    //allow user to enter other ways they heard of UniShop with an optional textbox
+    function askBox(){
+        document.getElementById("optbox").style.display = 'inline';
     }
     </script>
   
@@ -179,31 +195,68 @@ crossorigin="anonymous"></script>
           <div class="col-sm-8">
             <input type="email" name="address" id="email">
           </div>
+          <br>
+          <label>Occupation:</label>
+          <div class="row">
+            <label for="Student">Student</label>
+            <input type="radio" name="job" id="Student" value="student">
+            <label for="acadstaff">Academic Staff</label>
+            <input type="radio" name="job" id="acadstaff" value="academicstaff">
+            <label for="researcher">Researcher</label>
+            <input type="radio" name="job" id="researcher" value="researcher">
+            <label for="parent">Parent</label>
+            <input type="radio" name="job" id="parent" value="parent">
+            <label for="others">Others</label>
+            <input type="radio" name="job" id="others" value="others">
+          </div>
    
         <br>
-        <legend>Gender:</legend>
+        <p>Gender:</p>
         <div class="row">
-            <label for="Female">Female</label>
-            <input type="radio" name="Gender" id="Female" value="Female">
-        </div>
-        <div class="row">
-            <label for="Male">Male</label>
-            <input type="radio" name="Gender" id="Male" value="Male">
-        </div>
-        <div class="row">
-            <label for="notMentioned">Prefer not to say</label>
-            <input type="radio" name="Gender" id="notMentioned" value="notMentioned">
+            <div class="col-4">
+                <label for="Female">Female</label>
+                <input type="radio" name="Gender" id="Female" value="Female">
+            </div>
+            <div class="col-4">
+                <label for="Male">Male</label>
+                <input type="radio" name="Gender" id="Male" value="Male">
+            </div>
+            <div class="col-4">
+                <label for="notMentioned">Prefer not to say</label>
+                <input type="radio" name="Gender" id="notMentioned" value="notMentioned">
+            </div>
+        
         </div>
         <br>
 
           <div class="dropdown col-5" >
-            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" id="ageGroup">Age group</button>
+            <label for="ageSelection"> Age Group: </label>
+            <button type="button" itemid="ageSelection" class="btn dropdown-toggle btn-outline-dark" data-bs-toggle="dropdown" id="ageGroup">Select</button>
             <ul class="dropdown-menu">
               <li value="student" onclick="ageselect('18-25')">18-25</li>
               <li value="older" onclick="ageselect('25-40')">25-40</li>
               <li value="elder" onclick="ageselect('40+')">40+</li>
             </ul>
           </div>
+
+          <br>
+          <legend> Questionnaire </legend>
+
+          <label for="source">How did you find out about UniShop?</label><br>
+          <div class="row">
+            <label for="socMed">Social Media</label>
+            <input type="checkbox" name="sources" id="socMed" value="Social Media">
+            <label for="fnf">Friends & Family</label>
+            <input type="checkbox" name="sources" id="fnf" value="Friends & Family">
+            <label for="stud">Students</label>
+            <input type="checkbox" name="sources" id="stud" value="Students">
+            <label for="acastaff"> Academic Staff</label>
+            <input type="checkbox" name="sources" id="acastaff" value="Academic Staff">
+            <label for="specify">Other (Please specify.)</label>
+            <input type="checkbox" name="sources" id="specify" value="Other (Specify)" onclick="askBox()">
+            <input type="text" id="optBox" style="display: none;"></p>
+          </div>
+
           <br>
           <table class="table table-sm table-striped">
             <thead class="table-primary">
@@ -272,16 +325,16 @@ crossorigin="anonymous"></script>
         <br>
         <div class="container">
             <label for="suggestions">Products you would like to see in UniShop:</label>
-            <textarea id = "suggestions" class="container-fluid"></textarea>
+            <input type="text" id = "suggestions" class="container-fluid"></textarea>
         </div>
         <br>
         
         <div class="container">
             <label class="h3 text-primary">How Can We Improve?</label>
-            <textarea id ="comment" name="comment" class="container-fluid"></textarea>
+            <input type="text" id ="comment" name="comment" class="container-fluid"></textarea>
         </div>    
         <br>
-        <input type="submit" class="bg-primary text-white" value="Submit">
+        <input type="submit" class="btn-outline-primary outext-white" value="Submit">
         </fieldset>      
       </form>
       <br>
