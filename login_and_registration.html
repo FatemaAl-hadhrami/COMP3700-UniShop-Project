@@ -4,128 +4,236 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login & Register - UniShop</title>
+
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body class="bg-light">
 
-  <!-- Header (from Academic page) -->
-  <header class="container-fluid bg-white">
-    <div class="row align-items-center p-4">
-      <div class="col-md-2">
-        <p class="h3 text-primary">UniShop</p>
-        <a href="index.html">
-          <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" class="img-fluid" />
-        </a>
-      </div>
-      <div class="col-md-6">
-        <form action="https://httpbin.org/get" method="get">
-          <div class="row">
-            <div class="col-8">
-              <input type="text" name="query" class="form-control" placeholder="Search..." />
-            </div>
-            <div class="col-4">
-              <input type="submit" value="Search" class="btn btn-primary w-100" />
-            </div>
+<!-- ================= HEADER ================= -->
+<header class="container-fluid bg-white">
+  <div class="row align-items-center p-4">
+    <div class="col-md-2">
+      <p class="h3 text-primary">UniShop</p>
+      <a href="index.html">
+        <img src="images/UniShop_logo.png" class="img-fluid" />
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <form action="#" method="get">
+        <div class="row">
+          <div class="col-8">
+            <input type="text" class="form-control" placeholder="Search...">
           </div>
-        </form>
-      </div>
-      <div class="col-md-4 text-end">
-        <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
-        <a href="cart.html" class="btn btn-outline-primary fs-4">🛒 <span class="text-danger">0</span></a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Navbar (from Academic page) -->
-  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-    <div class="container-fluid">
-      <div class="navbar-nav">
-        <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link" href="About_us.html">About Us</a>
-        <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
-        <a class="nav-link" href="medical-items.html">Medical & Laboratory Items</a>
-        <a class="nav-link" href="contact_us.html">Contact Us</a>
-        <a class="nav-link" href="cart.html">My Cart</a>
-        <a class="nav-link active" href="login_and_registration.html">Login</a>
-        <a class="nav-link" href="order_tracking.html">Order Tracking</a>
-        <a class="nav-link" href="questionnaire.html">Questionnaire</a>
-        <a class="nav-link" href="calculator.html">Calculator</a>
-        <a class="nav-link" href="funpage.html">Fun Page</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <div class="container mt-5 mb-5">
-    <div class="row g-4">
-      <!-- Login Form -->
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h3 class="card-title mb-4">Login</h3>
-            <form action="https://httpbin.org/get" method="get">
-              <div class="mb-3">
-                <label class="form-label">Username</label>
-                <input type="text" name="username" class="form-control" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Phone Number</label>
-                <input type="tel" name="phone" class="form-control" placeholder="968-XXXXXXXX" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" required>
-              </div>
-              <button type="submit" class="btn btn-primary w-100">Login Now</button>
-            </form>
+          <div class="col-4">
+            <button class="btn btn-primary w-100">Search</button>
           </div>
         </div>
-      </div>
+      </form>
+    </div>
 
-      <!-- Registration Form -->
-      <div class="col-md-6">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h3 class="card-title mb-4">Register</h3>
-            <form action="#">
-              <div class="mb-3">
-                <label class="form-label">Full Name</label>
-                <input type="text" name="fullname" class="form-control">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">College/Faculty</label>
-                <select name="college" class="form-select">
-                  <option>Engineering</option>
-                  <option>Science</option>
-                  <option>Medicine</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" name="pass" class="form-control">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Confirm Password</label>
-                <input type="password" name="confirm_pass" class="form-control">
-              </div>
-              <div class="form-check mb-3">
-                <input type="checkbox" name="terms" class="form-check-input" id="termsCheck">
-                <label class="form-check-label" for="termsCheck">I agree to Terms & Conditions</label>
-              </div>
-              <button type="submit" class="btn btn-success w-100">Register Account</button>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-4 text-end">
+      <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
+      <a href="cart.html" class="btn btn-outline-primary fs-4">🛒 <span>0</span></a>
     </div>
   </div>
+</header>
 
-  <!-- Footer (from Academic page) -->
-  <footer class="bg-primary text-white text-center py-3">
-    <p class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
-  </footer>
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="container-fluid">
+    <div class="navbar-nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="About_us.html">About Us</a>
+      <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
+      <a class="nav-link" href="medical-items.html">Medical</a>
+      <a class="nav-link" href="contact_us.html">Contact</a>
+      <a class="nav-link" href="cart.html">Cart</a>
+      <a class="nav-link active" href="login_and_registration.html">Login</a>
+      <a class="nav-link" href="order_tracking.html">Order Tracking</a>
+      <a class="nav-link" href="funpage.html">Fun Page</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= MAIN ================= -->
+<div class="container mt-5 mb-5">
+  <div class="row g-4">
+
+    <!-- ================= LOGIN ================= -->
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="mb-4 text-primary">Login</h3>
+
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label">Username</label>
+              <input type="text" id="username" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="text" id="phone" class="form-control" placeholder="968XXXXXXXX">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="password" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= REGISTER ================= -->
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="mb-4 text-success">Register</h3>
+
+          <form id="registerForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="fullname" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">College</label>
+              <select id="college" class="form-select">
+                <option value="">Select</option>
+                <option>Engineering</option>
+                <option>Science</option>
+                <option>Medicine</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="regPassword" class="form-control">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Confirm Password</label>
+              <input type="password" id="confirmPassword" class="form-control">
+            </div>
+
+            <div class="form-check mb-3">
+              <input type="checkbox" id="terms" class="form-check-input">
+              <label class="form-check-label">I agree to Terms & Conditions</label>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Register</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white text-center py-3">
+  &copy; 2026 UniShop. All rights reserved.
+</footer>
+
+<!-- ================= JAVASCRIPT VALIDATION ================= -->
+<script>
+
+// ===============================
+// LOGIN VALIDATION (Rubric: advanced rules)
+// ===============================
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+
+  let username = document.getElementById("username").value.trim();
+  let phone = document.getElementById("phone").value.trim();
+  let password = document.getElementById("password").value;
+
+  // Rule 1: Username must be at least 3 chars
+  if (username.length < 3) {
+    alert("❌ Username must be at least 3 characters");
+    e.preventDefault();
+    return;
+  }
+
+  // Rule 2: Phone must match Oman format
+  let phonePattern = /^968\d{8}$/;
+  if (!phonePattern.test(phone)) {
+    alert("❌ Phone must be like 968XXXXXXXX");
+    e.preventDefault();
+    return;
+  }
+
+  // Rule 3: Password must include number + min 6 chars
+  let passPattern = /^(?=.*\d).{6,}$/;
+  if (!passPattern.test(password)) {
+    alert("❌ Password must be at least 6 characters and include a number");
+    e.preventDefault();
+    return;
+  }
+
+  alert("✅ Login Successful!");
+});
+
+
+// ===============================
+// REGISTER VALIDATION
+// ===============================
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+
+  let fullname = document.getElementById("fullname").value.trim();
+  let college = document.getElementById("college").value;
+  let pass = document.getElementById("regPassword").value;
+  let confirm = document.getElementById("confirmPassword").value;
+  let terms = document.getElementById("terms").checked;
+
+  // Rule 1: Full name letters only
+  let namePattern = /^[A-Za-z\s]{3,}$/;
+  if (!namePattern.test(fullname)) {
+    alert("❌ Full name must contain only letters (min 3 chars)");
+    e.preventDefault();
+    return;
+  }
+
+  // Rule 2: College must be selected
+  if (college === "") {
+    alert("❌ Please select your college");
+    e.preventDefault();
+    return;
+  }
+
+  // Rule 3: Password strength
+  let passPattern = /^(?=.*\d).{6,}$/;
+  if (!passPattern.test(pass)) {
+    alert("❌ Password must be 6+ chars and include number");
+    e.preventDefault();
+    return;
+  }
+
+  // Rule 4: Confirm password match
+  if (pass !== confirm) {
+    alert("❌ Passwords do not match");
+    e.preventDefault();
+    return;
+  }
+
+  // Rule 5: Terms must be accepted
+  if (!terms) {
+    alert("❌ You must accept Terms & Conditions");
+    e.preventDefault();
+    return;
+  }
+
+  alert("✅ Registration Successful!");
+});
+
+</script>
 
 </body>
 </html>
