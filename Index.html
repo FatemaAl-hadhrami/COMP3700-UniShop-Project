@@ -23,7 +23,6 @@
       }
     </script>
     <script>
-      // === Scrolling Banner Animation + Live Date & Time ===
       const bannerStyle = document.createElement("style");
       bannerStyle.textContent = `
         @keyframes scrollLeft {
@@ -57,7 +56,6 @@
         if (timeEl) timeEl.textContent = timeStr;
       }
 
-      // Start immediately and update every second
       updateBanner();
       setInterval(updateBanner, 1000);
     </script>
@@ -65,7 +63,7 @@
       window.addEventListener("DOMContentLoaded", function () {
       const toastEl = document.getElementById("welcomeToast");
       const toast   = new bootstrap.Toast(toastEl);
-      toast.show();   // Display the Bootstrap Toast
+      toast.show();   
     });
     </script>
     
@@ -75,9 +73,9 @@
     <header class="container-fluid bg-white">
     <div class="row align-items-center p-4">
         <div class="col-md-2">
-          <p class="h3 text-primary mb-0"> UniShop</p>
+          <p class="h3 text-primary "> UniShop</p>
           <a href="index.html">
-            <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" />
+            <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" class="img-fluid" />
           </a>
         </div>
         <div class="col-md-6">
