@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Cart - UniShop</title>
 
-  <!-- Bootstrap ONLY -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
 
-<!-- ================= HEADER (from Academic page style) ================= -->
+<!-- ================= HEADER ================= -->
 <header class="container-fluid bg-white">
   <div class="row align-items-center p-4">
     <div class="col-md-2">
@@ -24,10 +23,7 @@
     <div class="col-md-6"></div>
 
     <div class="col-md-4 text-end">
-      <a href="login_and_registration.html" class="btn btn-outline-primary">
-        Login / Register
-      </a>
-
+      <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
       <a href="cart.html" class="btn btn-outline-primary fs-4">
         🛒 <span class="text-danger" id="cartCount">0</span>
       </a>
@@ -50,19 +46,22 @@
   </div>
 </nav>
 
-<!-- ================= CART SECTION ================= -->
+<!-- ================= CART ================= -->
 <div class="container mt-5">
 
   <h2 class="text-center text-primary mb-4">My Cart</h2>
 
   <!-- SEARCH -->
-  <div class="row mb-3">
+  <div class="row mb-2">
     <div class="col-md-6 offset-md-3">
       <input type="text" id="searchInput" class="form-control" placeholder="Search product...">
     </div>
   </div>
 
-  <!-- ADD PRODUCT FORM -->
+  <!-- MESSAGE -->
+  <p id="searchMessage" class="text-center text-danger fw-bold"></p>
+
+  <!-- ADD PRODUCT -->
   <div class="row mb-4 text-center">
     <div class="col-md-3">
       <input type="text" id="name" class="form-control" placeholder="Product Name">
@@ -96,7 +95,6 @@
     <tbody id="cartTable"></tbody>
   </table>
 
-  <!-- TOTAL -->
   <h4 class="text-end">
     Grand Total: <span id="grandTotal">0</span> OMR
   </h4>
@@ -108,10 +106,11 @@
   &copy; 2026 UniShop. All rights reserved.
 </footer>
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ================= JS ================= -->
 <script>
 
-// Constructor Function (Rubric requirement)
+// ===============================
+// Constructor
 // ===============================
 function Product(name, price, qty) {
   this.name = name;
@@ -119,14 +118,14 @@ function Product(name, price, qty) {
   this.qty = qty;
 }
 
-// ARRAY (initial products)
+// CART ARRAY
 // ===============================
 let cart = [
   new Product("Labcoat", 15, 1),
   new Product("Calculator", 4, 2)
 ];
 
-// DISPLAY CART TABLE
+// DISPLAY CART
 // ===============================
 function displayCart(data = cart) {
 
@@ -156,8 +155,6 @@ function displayCart(data = cart) {
   });
 
   document.getElementById("grandTotal").innerText = total;
-
-  // update cart badge
   document.getElementById("cartCount").innerText = cart.length;
 }
 
@@ -178,37 +175,59 @@ function addProduct() {
 
   displayCart();
 
-  // clear inputs
   document.getElementById("name").value = "";
   document.getElementById("price").value = "";
   document.getElementById("qty").value = "";
 }
 
-
-// DELETE PRODUCT
+// DELETE
 // ===============================
 function deleteItem(index) {
   cart.splice(index, 1);
   displayCart();
 }
-
-
+  
 // SEARCH FUNCTION
 // ===============================
-document.getElementById("searchInput").addEventListener("input", function () {
+function searchCart() {
 
-  let value = this.value.toLowerCase();
+  let value = document.getElementById("searchInput").value.toLowerCase();
+  let message = document.getElementById("searchMessage");
 
   let filtered = cart.filter(item =>
     item.name.toLowerCase().includes(value)
   );
 
+  if (value === "") {
+    message.innerText = "";
+    displayCart(cart);
+    return;
+  }
+
+  if (filtered.length === 0) {
+    message.innerText = "❌ No products found in cart";
+  } else {
+    message.innerText = "";
+  }
+
   displayCart(filtered);
+}
+
+// LIVE SEARCH
+// ===============================
+document.getElementById("searchInput").addEventListener("input", searchCart);
+
+// ENTER KEY SEARCH
+// ===============================
+document.getElementById("searchInput").addEventListener("keydown", function(e) {
+
+  if (e.key === "Enter") {
+    e.preventDefault();
+    searchCart();
+  }
 });
 
-
 // INIT
-// ===============================
 displayCart();
 
 </script>
