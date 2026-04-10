@@ -10,6 +10,18 @@
     <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=NagszmRFJeuLkMqHlJdGL_e3cQ6WLCimnPpx1G3iGMoK2q63gkwYnexzuaIRbmj8HkLB8RCl2R3JCS9wh8-X52RRM8ylNu52UI1D9I1b38KcRh1ha_PVp-RtE4McEaogMt3o2ETgF9i8JtPAUdESvPVLhuD2WKz0mVmuuzIJJWS3PI-6JRt4RlpNx-2PQxiLMUKmigP4uqRCBnkw8TqEb2RqsWECU8nMe7lunybAL96bx0SwDgD8bOiiZsjD-0OpYSG_8IMV7SrTrjF4CCj1LIwdQHYE8c_UTuC4cwLSntuGO865B2TIGUVdDEN_zu6U6wk0soU8vbQ_2E1cspbEl-XDk0fSXc_sm_8-9P7yssvg8BJU0Y6-qVcAeBiUj1rQSPyNjGByIBxgqAGFDaTScy2MeKxYXkQPF-ESSkWQe0gpQDkfKGseoNQZ5HkjqdNhQYQCRhIFVMRNxJQDAa1KQJ1O0FmJTZPyB_KPlVhK2IUl4-6JzmxkyyhVv_otY-8FH8i_rCgdYsXlis5RmiWeJQdUwRrI61d_gdFtrionCjcjH72uLyoKBefyLa7XQXLVmq6xWdmGEaHX1JSzMWVayUKCCNVuC_Wu0ilhHiEg-Y8TS5peXS6pmLMI_7EgAVCDORzzEEEgc8dfIuSdcVGhOvZ7dz9MNGZlA7GtsA2Pm5CIpGcf_bGzU8eP53R8krzJcGnK8wEs6j_icAte7nDhRsuPDXHg4zkUZ-bMRKX-_S_VkOlukGHa9UVl0cacP-hIh53ZZFrRggqHCBjMLCSMu68r956sIxtVlGz9oKw8mImUx14vaglq2iTj6LUvCDKzDVlHyvh3ulagscoc1qWyNSALup3zfxdQ_7Cj5OnZHm5ZrbGT3MbadPFHeMLpw1jIlXyHtp07rKndkmdIxRKH8LvmH7fcbGILkvjEjINpVYs5HdMpUTsCcEvrEJiEXqlyYHx-2zASlvwy-oD2DEwgX3wFFh4Et3tqDvOL0hP6e_GGsukCw66hEYf8WaqqOHWXI8bFCZnjBTRi2uc44cblofhPiSNix5r-RGOJE-DA9EXqk9L_ssOpWDIb82HzOyGSq-qqq3SjW7VmBtG07F5A3oomXiqI6956N7fp4-Xh1oOTcoyOskHetcAk10WXfpZOEXh107kR_NWV3m8B2oLakhQ47SORjV4AN6OsDWQVKKo0US9ACAF3xJUDN395PHOx00UdcjOdvqxn6vBgDJzeBtdD-xKWvFtzDRh2fwQEhBvPRDK03YsS-5811SPsdHW89cFfaapdIGiIiu79OgDfFncZFmMZezjNg5yOz98N20fXevBKdlpk2fb_w_GgGEuAXQ_OT41TfjO3v-MjFC4yCMyv4QN3oa5xUk2F_dwXR5c0b3I9uHXaZuO4n8UU1be-0AdviOQS6gN6nXGuqQOTX_I--1UxVV5gbe3mSfOS-r0dKr7L3HiFkXIb1_eTvS5Jy9FJMUNV_oZG09QnkehuKGUuMuo1qHifjskGVMh2A1KI9a3us2zi14Piye1nWSSrfnfYTySe8cxEWXtmeBYith93VK4cdgNZVkyBYBQ4fkU3WQ4VniFw7mmtVj_QR-PNDZHz5qpqSsfFRtW7IS31VQ_KRzKE7aLe0FJEmBU0KxJlmC1BWQnaLSGn96FfEzl5sOt7vHgAvoOscytpZOemER1irjkNDIfEmmf7C8hzgFE-vqF5diV8J9zaMEfCx0Cvvabjf5xLaoGiLgi0UbafIUu5fP6Ck8IeP_fvhVxfB8TsL3UEMc30cUUsjk06RVfZf08SDoCRDutkWoQwgvMw-Q" nonce="080d57d52b533065b3750f7240073cbd" charset="UTF-8"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
             crossorigin="anonymous"></script>
+    function validateSearch(){
+      let searchBox = document.getElementById("searchInput");
+      if (searchBox.value == "") {
+        alert("Please enter a search word");
+        searchBox.focus();
+        return false;
+
+      }
+      return true;
+
+    }
+    
     </head>
 <body class="bg-light">
     <header class="container-fluid bg-white">
@@ -60,82 +72,83 @@
     </div>  
     </nav>
     
-    <div class="hero">
-    <div class="hero-text">
       <h1>Everything Your <span style="color: #a8d0f0;" >Campus Life</span> Needs — In One Place</h1>
       <p>
         UniShop is the dedicated online store for university students at Sultan Qaboos University.
         From textbooks and stationery to lab coats and scientific instruments — all in one organised platform.
       </p>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">2,400+</div>
-          <div class="stat-lbl">Products</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">50+</div>
-          <div class="stat-lbl">Vendors</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">8</div>
-          <div class="stat-lbl">Disciplines</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">24/7</div>
-          <div class="stat-lbl">Support</div>
+        
+      <div class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row text-center g-3">
+                <div class="col-6 col-md-3">
+                    <div class="fs-2 fw-bold">2,400+</div>
+                    <div class="small text-white-50">Products</div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="fs-2 fw-bold">50+</div>
+                    <div class="small text-white-50">Vendors</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="fs-2 fw-bold">2</div>
+                  <div class="small text-white-50">Disciplines</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="fs-2 fw-bold">24/7</div>
+                  <div class="small text-white-50">Support</div>
+                </div>
+            </div>
         </div>
       </div>
+
+    <div class="container my-5">
+    <div class="text-center mb-4">
+        <span class="text-uppercase text-primary fw-bold small letter-spacing-2">Browse by Field</span>
+        <h2 class="fw-bold text-primary mt-1"> Shop by Discipline</h2>
+        <p class="text-muted mx-auto" style="max-width:520 px;">Find everything you need for your specific academic field, all curated and verified for quality.</p>
     </div>
+    <div class="row g-4 justify-content-center">
+        <div class="col-sm-10 col-md-5">
+            <a href="academic_supplies.html" class="text-decoration-none">
+            <div class="card text-center h-100 border-2 shadow-sm hover-lift p-3">
+                <div class="card-body">
+                    <div class="display-5 mb-2">✏️  📚</div>
+                    <h5 class="card-title fw-bold text-primary"">Academic Supplies</h5>
+                    <p class="card-text text-muted small">410 products</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="col-sm-10 col-md-5">
+            <a href="medical-items.html" class="text-decoration-none">
+            <div class="card text-center h-100 border-2 shadow-sm p-3">
+                <div class="card-body">
+                    <div class="display-5 mb-2">🧪  🥼</div>
+                    <h5 class="card-title fw-bold text-primary"> Medical &amp; Laboratory Items</h5>
+                    <p class="card-text text-muted small">130 products</p>
+                </div>
+            </div>
+            </a>
+        </div>
+        </div>
     </div>
     
-    <div class="section">
-    <div class="section-header">
-        <div class="section-label">Browse by Field</div>
-        <h2 class="section-title">Shop by Discipline</h2>
-        <p class="section-subtitle">Find everything you need for your specific academic field, all curated and verified for quality.</p>
-    </div>
-    <div class="container">
-        <div class="row g-4 justify-content-center">
+    <div class="container my-5">
+        <div class="text-center mb-4">
+            <span class="text-uppercase text-primary fw-bold small">What We Offer</span>
+            <h2 class="fw-bold text-primary mt-1">Our Services</h2>
+        </div>
 
-        <div class="col-sm-10 col-lg-4">
-            <a href="academic_supplies.html" class="text-decoration-none">
-            <div class="card cat-card h-100 text-center">
-                <div class="card-body">
-                <div class="cat-icon">✏️  📚</div>
-                <h5 class="card-title cat-name">Academic Supplies</h5>
-                <p class="card-text cat-count">410 products</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        <div class="col-sm-10 col-lg-4">
-            <a href="medical-items.html" class="text-decoration-none">
-            <div class="card cat-card h-100 text-center">
-                <div class="card-body">
-                <div class="cat-icon">🧪  🥼</div>
-                <h5 class="card-title cat-name">Medical &amp; Laboratory Items</h5>
-                <p class="card-text cat-count">130 products</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        </div>
-    </div>
-    </div>
-    <div class="section">
-        <div class="section-header">
-            <div class="section-label">What We Offer</div>
-            <h2 class="section-title">Our Services</h2>
-        </div>
-            <table class="about-table">
-                    <tr>
-                        <th colspan="3" class="text-center">UniShop Student Services Overview</th>
-                    </tr>
-                    <tr>
-                        <th>Service</th>
-                        <th>Details</th>
-                        <th>Availability</th>
-                    </tr>
+        <div class="table-responsive shadow-sm rounded">
+            <table class="table table-bordered table-hover mb-0 align-middle">
+                <tr class="table-primary">
+                    <th colspan="3" class="text-center">UniShop Student Services Overview</th>
+                </tr>
+                <tr class="table-primary">
+                    <th>Service</th>
+                    <th>Details</th>
+                    <th>Availability</th>
+                </tr>        
                 <tbody>
                     <tr>
                         <td>Online Ordering</td>
@@ -159,10 +172,66 @@
                     </tr>
                 </tbody>
             </table>
-        
+        </div>
     </div>
-     <div class="site-footer">
+    <div class="container my-5">
+    <div class="text-center mb-4">
+      <span class="text-uppercase text-primary fw-bold small">Explore More</span>
+      <h2 class="fw-bold text-primary mt-1">Student Tools</h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-sm-10 col-md-4">
+        <div class="card text-center h-100 shadow-sm border-0 bg-white">
+          <div class="card-body p-4">
+            <div class="display-4 mb-3">📝</div>
+            <h5 class="fw-bold text-primary">Questionnaire</h5>
+            <p class="text-muted small mb-3"> Share your feedback and help us improve UniShop for every student.</p>
+            <a href="questionnaire.html" class="btn btn-primary">Go to Questionnaire</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-10 col-md-4">
+        <div class="card text-center h-100 shadow-sm border-0 bg-white">
+          <div class="card-body p-4">
+            <div class="display-4 mb-3">🧮</div>
+            <h5 class="fw-bold text-primary">Bill Calculator</h5>
+            <p class="text-muted small mb-3">Estimate your total order cost including discounts and delivery fees.</p>
+            <a href="calculator.html" class="btn btn-primary"> Open Calculator </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-10 col-md-4">
+        <div class="card text-center h-100 shadow-sm border-0 bg-white">
+          <div class="card-body p-4">
+            <div class="display-4 mb-3">🎮</div>
+            <h5 class="fw-bold text-primary">Fun Page</h5>
+            <p class="text-muted small mb-3"> Take a break — play our campus-themed mini game between study sessions.</p>
+            <a href="funpage.html" class="btn btn-primary"> Let's Play </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary py-2 overflow-hidden">
+        <div id="scrollBanner" class="text-white fw-semibold small"
+            style="white-space:nowrap; display:inline-block;">
+        </div>
+      </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:1100;">
+        <div id="welcomeToast" class="toast align-items-center text-bg-primary border-0"
+            role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="true" data-bs-delay="6000">
+          <div class="d-flex">
+            <div class="toast-body fw-bold">
+              👋 Welcome to UniShop — your campus store at SQU!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                    data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+     <footer class="bg-primary text-white text-center py-3">
         <p>&copy; 2026 UniShop. All rights reserved.</p>
-    </div>
+    </footer>
 </body>
 </html>
