@@ -13,7 +13,7 @@ crossorigin="anonymous"></script>
   
   <script type="text/javascript">
   function validateSearch(){
-      let searchBox = document.forms["searchForm"]["searchInput"]; 
+      let searchBox = document.getElementById("searchInput"); 
       if (searchBox.value == "") {
         alert("Please enter a search word");
         searchBox.focus();
@@ -22,9 +22,9 @@ crossorigin="anonymous"></script>
         return true;
     }
     function validform(){
-        let emailadd = document.forms["contactForm"]["email"]; 
-        var username = document.forms["contactForm"]["name"];
-        var customtext = document.forms["contactForm"]["message"];
+        let emailadd = document.getElementById("email"); 
+        let username = document.getElementById("name");
+        var customtext = document.getElementById("message");
         if (emailadd.value == ""){
             alert("Please enter a valid email address.")
             emailadd.focus();
@@ -115,14 +115,18 @@ crossorigin="anonymous"></script>
             <form action="#" name="contactForm" onsubmit="return validform()">
                 <fieldset>
                     <legend>Contact Form</legend>
-                    <label>Full Name:</label>
-                    <input type="text" name="name" id="name" required>
-          
-                    <label>Email Address:</label>
-                    <input type="email" name="email" id="email" required>
+                     <label for="user">Full Name:</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="user" id="name">
+                    </div>
+                    <br>
+                    <label for="email">Email Address:</label>
+                    <div class="col-sm-8">
+                      <input type="email" name="address" id="email">
+                    </div>
 
-                    <div class="dropdown col-4 text-center" >
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Inquiry Type:</button>
+                    <div class="dropdown col-5" >
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="inquiry">Inquiry Type:</button>
                         <ul class="dropdown-menu">
                             <li value="general">General Inquiry</li>
                             <li value="order">Order Issue</li>
