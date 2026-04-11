@@ -56,6 +56,7 @@
         if (timeEl) timeEl.textContent = timeStr;
       }
 
+      // Start immediately and update every second
       updateBanner();
       setInterval(updateBanner, 1000);
     </script>
@@ -63,7 +64,7 @@
       window.addEventListener("DOMContentLoaded", function () {
       const toastEl = document.getElementById("welcomeToast");
       const toast   = new bootstrap.Toast(toastEl);
-      toast.show();   
+      toast.show();   // Display the Bootstrap Toast
     });
     </script>
     
@@ -118,11 +119,52 @@
     </div>  
     </nav>
     
-      <h1>Everything Your <span style="color: #a8d0f0;" >Campus Life</span> Needs — In One Place</h1>
-      <p>
-        UniShop is the dedicated online store for university students at Sultan Qaboos University.
-        From textbooks and stationery to lab coats and scientific instruments — all in one organised platform.
-      </p>
+    <div class="container my-5">
+        <div class="row align-items-center">
+          
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold">
+              Everything Your <span style="color: #3f95db;">Campus Life</span> Needs — In One Place
+            </h1>
+            <p class="lead text-muted mt-3">
+              UniShop is the dedicated online store for university students at Sultan Qaboos University.
+              From textbooks and stationery to lab coats and scientific instruments — all in one organised platform.
+            </p>
+            
+            <a href="academic_supplies.html" class="btn btn-primary btn-lg mt-3 me-2">Shop Academic Supplies</a>
+            <a href="medical-items.html" class="btn btn-outline-primary btn-lg mt-3"> Browse Lab Items</a>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+
+              <div class="carousel-inner rounded-4 shadow">
+
+                <div class="carousel-item active">
+                  <img src="images/ballpoint-pens.png" class="d-block w-100" alt="pens">
+                </div>
+                
+                <div class="carousel-item">
+                  <img src="images/200pages_4_notebooks.jpg" class="d-block w-100" alt="Notebooks">
+                </div>
+                
+                <div class="carousel-item">
+                  <img src="images/Casio_fx9911es_plus_scientific_calc.jpg" class="d-block w-100" alt="calculator">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
         
       <div class="bg-primary text-white py-4">
         <div class="container">
