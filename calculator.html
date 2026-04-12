@@ -22,8 +22,12 @@
           }
       </script>
       <script>
+        // Global variable to store the promo discount percentage
         var promoDiscount = 0;
-
+        /**
+       * Applies promo code and updates the discount percentage.
+       * Supports "UNISHOP10" (10% off) and "SQU5" (5% off).
+       */
         function applyPromo() {
           var code = document.getElementById("promoCode").value.trim().toUpperCase();
           var msgEl = document.getElementById("promoMsg");
@@ -46,6 +50,14 @@
           }
         }
 
+        /**
+         * Main function that calculates the complete bill including:
+         * - Subtotal from selected items
+         * - Age-based discount + Promo discount
+         * - Delivery fee
+         * - VAT (5%)
+         * - Final total
+         */
         function calculateBill() {
 
           /* Step 1: Sum all selected items */
@@ -149,13 +161,14 @@
             badgeEl.classList.add("d-none");
           }
 
-          /* Populate totals */
+          /* Populate summary totals */
           document.getElementById("summarySubtotal").textContent = subtotal.toFixed(3)       + " OMR";
           document.getElementById("summaryDiscount").textContent = "– " + discountAmount.toFixed(3) + " OMR";
           document.getElementById("summaryDelivery").textContent = deliveryFee.toFixed(3)    + " OMR";
           document.getElementById("summaryVAT").textContent      = vat.toFixed(3)            + " OMR";
           document.getElementById("summaryTotal").textContent    = total.toFixed(3)          + " OMR";
 
+          /* Update discount label */
           if (totalDiscountPct > 0) {
             document.getElementById("discountLabel").textContent = "Discount (" + totalDiscountPct + "%)";
           } else {
@@ -165,6 +178,10 @@
           document.getElementById("totalsSection").classList.remove("d-none");
         }
 
+        /**
+         * Resets the entire calculator to its initial state.
+         * Clears all quantities, age, promo code, and hides results.
+         */
         function resetCalculator() {
           var qtyInputs = document.getElementsByName("item-qty");
 
