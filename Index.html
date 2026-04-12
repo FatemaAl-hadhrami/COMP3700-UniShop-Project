@@ -11,6 +11,10 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
         crossorigin="anonymous"></script>
     <script>
+        /**
+         * Validates the search input before submitting the form.
+         * If the search box is empty, it shows an alert and prevents form submission.
+         */
       function validateSearch(){
         let searchBox = document.getElementById("searchInput");
         if (searchBox.value == "") {
@@ -21,50 +25,70 @@
         return true;
       }
     </script>
-    <script>
-      const bannerStyle = document.createElement("style");
-      bannerStyle.textContent = `
+    <style>
+        /* Animation for the scrolling banner at the bottom of the page */
         @keyframes scrollLeft {
-          0%   { transform: translateX(100%); }
-          100% { transform: translateX(-100%); }
+            0%   { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
+    
+        /* Styles for the scrolling welcome banner */
         #scrollBanner {
-          animation: scrollLeft 30s linear infinite;
-          padding-left: 50px;
+            animation: scrollLeft 30s linear infinite;
+            padding-left: 50px;
+            display: inline-block;
+            white-space: nowrap;
         }
-      `;
-      document.head.appendChild(bannerStyle);
+    </style>
 
-      function updateBanner() {
-        const now = new Date();
-
-        const dateStr = now.toLocaleDateString("en-GB", {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric"
-        });
-
-        const timeStr = now.toLocaleTimeString("en-GB");
-
-        // Update the spans
-        const dateEl = document.getElementById("datePart");
-        const timeEl = document.getElementById("timePart");
-
-        if (dateEl) dateEl.textContent = dateStr;
-        if (timeEl) timeEl.textContent = timeStr;
-      }
-
-      // Start immediately and update every second
-      updateBanner();
-      setInterval(updateBanner, 1000);
-    </script>
     <script>
-      window.addEventListener("DOMContentLoaded", function () {
-      const toastEl = document.getElementById("welcomeToast");
-      const toast   = new bootstrap.Toast(toastEl);
-      toast.show();   // Display the Bootstrap Toast
-    });
+        /**
+         * Updates the date and time displayed in the scrolling banner.
+         * This function runs every second using setInterval.
+         */
+        function updateBanner() {
+            var now = new Date();
+    
+            var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var months = ["January","February","March","April","May","June",
+                          "July","August","September","October","November","December"];
+    
+            // Format the date: e.g., "Monday, 13 April 2026"
+            var dateStr = days[now.getDay()] + ", " + now.getDate() + " " +
+                          months[now.getMonth()] + " " + now.getFullYear();
+    
+            // Format the time: e.g., "14:35:09"
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            
+            if (m < 10) { m = "0" + m; }
+            if (s < 10) { s = "0" + s; }
+            
+            var timeStr = h + ":" + m + ":" + s;
+    
+            // Update the spans in the scrolling banner
+            const dateEl = document.getElementById("datePart");
+            const timeEl = document.getElementById("timePart");
+    
+            if (dateEl) dateEl.textContent = dateStr;
+            if (timeEl) timeEl.textContent = timeStr;
+        }
+    
+        // Start updating the banner every second
+        setInterval(updateBanner, 1000);
+    </script>
+
+    <script>
+        /**
+         * Shows the welcome toast message when the page fully loads.
+         * Uses Bootstrap's Toast component.
+         */
+          window.addEventListener("DOMContentLoaded", function () {
+          const toastEl = document.getElementById("welcomeToast");
+          const toast   = new bootstrap.Toast(toastEl);
+          toast.show();   // Display the Bootstrap Toast
+        });
     </script>
     
     
