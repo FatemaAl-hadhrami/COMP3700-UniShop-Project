@@ -11,6 +11,20 @@
             integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
             crossorigin="anonymous">
     </script>
+    <script type="text/javascript">
+      function validateSearch(){
+          let searchBox = document.getElementById("searchInput");
+          if (searchBox.value == "") {
+            alert("Please enter a search word");
+            searchBox.focus();
+            return false;
+    
+          }
+          return true;
+    
+        }
+    
+    </script>
 </head>
 <body class="bg-light">
     <header class="container-fluid bg-white">
@@ -98,19 +112,19 @@
             </div>
             <div class="row g-3 pt-3 border-top">
                 <div class="col-sm-6 col-lg-3">
-                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:11px">Order Date</p>
+                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:15px">Order Date</p>
                     <p class="mb-0">18 March 2026</p>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:11px">Payment Method</p>
+                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:15px">Payment Method</p>
                     <p class="mb-0">Credit Card **** 4821</p>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:11px">Delivery Address</p>
+                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:15px">Delivery Address</p>
                     <p class="mb-0">Sultan Qaboos University, Muscat</p>
                 </div>
                 <div class="col-sm-6 col-lg-3">
-                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:11px">Contact</p>
+                    <p class="text-uppercse text-muted fw-bold mb-0" style="font-size:15px">Contact</p>
                     <p class="mb-0">student@squ.edu.om</p>
                 </div>
             </div>
@@ -118,80 +132,81 @@
     </div>
 
     <div class="row g-4">
-
-        
         <div class="col-lg-5">
-
-            <div class="card shadow-sm mb-4 tracking-card">
+            <div class="card shadow-sm mb-4 border-0">
                 <div class="card-body p-4">
-                    <p class="section-label">Live Status</p>
-                    <h5 class="section-title">Shipping Progress</h5>
-                    <p class="step-counter mb-1">Step 4 of 5 — Out for Delivery</p>
+                    <p class="text-uppercase text-primary fw-bold mb-1" style="font-size:11px; letter-spacing:1px;">Live Status</p>
+                    <h5 class="fw-bold text-primary mb-1">Shipping Progress</h5>
+                    <p class="text-muted small mb-3">Step 4 of 5 — Out for Delivery</p>
 
-                    <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-start step-done">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-start border-4
+                            border-primary ps-3 mb-2 rounderd">
                             <div>
-                                <p class="fw-bold mb-0 step-title-done"> Order Placed</p>
-                                <p class="mb-0 step-desc">Your order was received and processed.</p>
+                                <p class="fw-bold mb-0 text-primary"> Order Placed</p>
+                                <p class="mb-0 text-muted small">Your order was received and processed.</p>
                             </div>
-                            <small class="step-time ms-2">18 Mar – 10:42 AM</small>
+                            <small class="text-muted ms-2 text-nowrap">18 Mar – 10:42 AM</small>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start step-done">
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-start border-4
+                            border-primary ps-3 mb-2 rounderd">
                             <div>
-                                <p class="fw-bold mb-0 step-title-done"> Payment Confirmed</p>
-                                <p class="mb-0 step-desc">Payment was verified successfully.</p>
+                                <p class="fw-bold mb-0 text-primary"> Payment Confirmed</p>
+                                <p class="mb-0 text-muted small">Payment was verified successfully.</p>
                             </div>
-                            <small class="step-time ms-2">18 Mar – 10:45 AM</small>
+                            <small class="text-muted ms-2 text-nowrap">18 Mar – 10:45 AM</small>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start step-done">
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-start border-4
+                            border-primary ps-3 mb-2 rounderd">
                             <div>
-                                <p class="fw-bold mb-0 step-title-done"> Order Packed</p>
-                                <p class="mb-0 step-desc">Items packed and ready for dispatch.</p>
+                                <p class="fw-bold mb-0 text-primary"> Order Packed</p>
+                                <p class="mb-0 text-muted small">Items packed and ready for dispatch.</p>
                             </div>
-                            <small class="step-time ms-2">19 Mar – 09:00 AM</small>
+                            <small class="text-muted ms-2 text-nowrap">19 Mar – 09:00 AM</small>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start step-active">
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-start border-4
+                            border-info bg-info bg-opacity-10 ps-3 mb-2 rounderd">
                             <div>
-                                <p class="fw-bold mb-0 step-title-active"> Out for Delivery</p>
-                                <p class="mb-0 step-desc">Your order is on its way to your address.</p>
+                                <p class="fw-bold mb-0 text-info"> Out for Delivery</p>
+                                <p class="mb-0 text-muted small">Your order is on its way to your address.</p>
                             </div>
-                            <span class="badge bg-primary align-self-center ms-2 badge-active">Active</span>
+                            <span class="badge bg-info text-dark align-self-center ms-2 ">Active</span>
                         </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start step-pending">
+                        <li class="list-group-item d-flex justify-content-between align-items-start border-start border-4
+                            border-secondary opacity-50 ps-3 rounderd">
                             <div>
-                                <p class="fw-bold mb-0 step-title-pending"> Delivered</p>
-                                <p class="mb-0 step-desc-pending">Awaiting delivery confirmation.</p>
+                                <p class="fw-bold mb-0 text-secondary"> Delivered</p>
+                                <p class="mb-0 text-secondary small">Awaiting delivery confirmation.</p>
                             </div>
-                            <small class="step-time ms-2">Est. 23 Mar</small>
+                            <small class="text-secondary ms-2 text-nowrap">Est. 23 Mar</small>
                         </li>
                     </ul>
                 </div>
             </div>
 
             
-            <div class="card shadow-sm eta-card">
-                <div class="card-body p-4 d-flex align-items-center gap-3">
-                    <div>
-                        <p class="section-label mb-1">Estimated Delivery</p>
-                        <h5 class="fw-bold mb-0 eta-date">Sunday, 23 March 2026</h5>
-                        <p class="mb-0 eta-time">Between 9:00 AM – 5:00 PM</p>
-                    </div>
+            <div class="card shadow-sm border-0 bg-primary bg-opacity-10">
+                <div class="card-body p-4 ">
+                    <p class="text-uppercase text-primary fw-bold mb-1"
+                     style="font-size:11px;">Estimated Delivery</p>
+                    <h5 class="fw-bold mb-0 text-primary">Sunday, 23 March 2026</h5>
+                    <p class="mb-0 text-muted small">Between 9:00 AM – 5:00 PM</p>
                 </div>
             </div>
 
         </div>
 
-        
         <div class="col-lg-7">
-            <div class="card shadow-sm mb-4 tracking-card">
+            <div class="card shadow-sm border-0">
                 <div class="card-body p-4">
-                    <p class="section-label">Your Purchase</p>
-                    <h5 class="section-title">Order Items</h5>
+                    <p class="text-uppercase text-primary fw-bold mb-1"
+                        style="font-size:11px;">Your Purchase</p>
+                    <h5 class="fw-bold text-primary mb-3">Order Items</h5>
 
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover order-items-table">
-                            <thead>
-                                <tr class="order-table-head">
+                        <table class="table table-bordered table-hover table-striped align-middle">
+                            <thead  class="table-primary">
+                                <tr>
                                     <th>Product</th>
                                     <th>Category</th>
                                     <th>Qty</th>
@@ -205,39 +220,39 @@
                                     <td>Medical &amp; Laboratory Items</td>
                                     <td>1</td>
                                     <td>15.000 OMR</td>
-                                    <td class="fw-bold subtotal-cell">15.000 OMR</td>
+                                    <td class="fw-bold text-primary">15.000 OMR</td>
                                 </tr>
                                 <tr>
                                     <td>fx-9911ES PLUS scientific calculator</td>
                                     <td>Stationery</td>
                                     <td>2</td>
                                     <td>4.000 OMR</td>
-                                    <td class="fw-bold subtotal-cell">8.000 OMR</td>
+                                    <td class="fw-bold text-primary">8.000 OMR</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     
-                    <div class="row justify-content-end">
+                    <div class="row justify-content-end mt-2">
                         <div class="col-sm-12 col-lg-7">
-                            <div class="order-total-box p-3">
-                                <div class="d-flex justify-content-between py-2 total-row-border">
+                            <div class="bg-light border rounded p-3">
+                                <div class="d-flex justify-content-between py-2 border-bottom text-muted small">
                                     <span>Subtotal</span><span>23.000 OMR</span>
                                 </div>
-                                <div class="d-flex justify-content-between py-2 total-row-border">
+                                <div class="d-flex justify-content-between py-2 border-bottom text-muted small">
                                     <span>Shipping Fee</span><span>1.500 OMR</span>
                                 </div>
-                                <div class="d-flex justify-content-between py-2 total-row-border">
+                                <div class="d-flex justify-content-between py-2 border-bottom text-muted small">
                                     <span>VAT (5%)</span><span>0.400 OMR</span>
                                 </div>
-                                <div class="d-flex justify-content-between pt-3 total-grand">
+                                <div class="d-flex justify-content-between pt-3 border-bottom text-muted small">
                                     <span>Total</span><span>24.900 OMR</span>
                                 </div>
                             </div>
 
                             <div class="d-flex gap-2 mt-3">
-                                <a href="cart.html" class="btn btn-track w-100 fw-bold">🛒 View Cart</a>
+                                <a href="cart.html" class="btn btn-primary w-100 fw-bold">🛒 View Cart</a>
                                 <button class="btn btn-danger w-100 fw-bold"> Cancel Order</button>
                             </div>
                         </div>
@@ -248,21 +263,21 @@
         </div>
 
     </div>
-</div>
-<div class="card shadow-sm mt-2 mb-4" style="border-left: 4px solid #4a8fd4; background: #f4f8fd;">
-    <div class="card-body py-3 px-4 d-flex align-items-center gap-3">
-        <div>
-            <p class="fw-bold mb-0" style="color: #1e3a6e;">Need Help?</p>
-            <p class="mb-0" style="font-size: 14px; color: #2d2d2d;">
+    
+<div class="card shadow-sm mt-4 border-0 border-start border-4 border-primary bg-primary bg-opacity-10">
+    <div class="card-body py-3 px-4">
+        <p class="fw-bold mb-1 text-primary">Need Help?</p>
+        <p class="mb-0 text-muted small">
                 Having trouble with your order? Reach us anytime at
-                <a href="mailto:support@unishop.com">support@unishop.com</a> — we're available 24/7.
-            </p>
-        </div>
+            <a href="mailto:support@unishop.com" class="text-primary fw-bold">support@unishop.com</a> — we're available 24/7.
+        </p>
     </div>
 </div>
-<div class="site-footer">
-    <p>&copy; 2026 UniShop. All rights reserved.</p>
 </div>
+    
+<footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
