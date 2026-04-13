@@ -11,15 +11,100 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
       crossorigin="anonymous"></script>
       <script type="text/javascript">
-        function validateSearch(){
-          let searchBox = document.getElementById("searchInput");
-            if (searchBox.value == "") {
-            alert("Please enter a search word");
-            searchBox.focus();
-            return false;
-            }
-          return true;
-          }
+        // Function to handle search action
+  function validateSearch(){
+      let searchBox = document.getElementById("searchInput");
+      let word = searchBox.value.trim().toLowerCase();
+      // check if the search box is empty
+      if (word== "") {
+        alert("Please enter a search word");
+        searchBox.focus();
+        return false;
+
+      }
+  // For academic items
+  if(word.includes("pen")){
+    window.location.href="academic_supplies.html#pens";
+    return false;
+  }
+   if(word.includes("notebook")){
+window.location.href="academic_supplies.html#notebooks";
+    return false;
+   }
+      if(word.includes("single book") || word.includes("book") ){
+window.location.href="academic_supplies.html#singlebook";
+    return false;
+   }
+
+  if(word.includes("graphing calculator")|| word.includes("graphing")){
+window.location.href="academic_supplies.html#calculator911";
+    return false;
+   }
+   
+     if(word.includes("calculator" )){
+window.location.href="academic_supplies.html#calculator82";
+    return false;
+   }
+   
+   if(word.includes("note")||word.includes("study") ){
+window.location.href="academic_supplies.html#studynotes";
+
+    return false;
+   }
+   if(word.includes("gray bag") || word.includes("grey bag")){
+    window.location.href="academic_supplies.html#graybag";
+    return false;
+   }
+      if(word.includes("brown bag")){
+    window.location.href="academic_supplies.html#brownbag";
+    return false;
+   }
+      if(word.includes("laptop") || word.includes("computer")){
+window.location.href="academic_supplies.html#laptop";
+
+    return false;
+   }
+    if(word.includes("bag")){
+window.location.href="academic_supplies.html";
+
+    return false;
+   }
+      if(word.includes("lab coat") ){
+window.location.href="medical-items.html#labcoat";
+
+    return false;
+   }
+      if(word.includes("scrubs")){
+window.location.href="medical-items.html#scrubs";
+
+    return false;
+   }
+   
+         if(word.includes("stethoscope")){
+window.location.href="medical-items.html#stethoscope";
+
+    return false;
+   }
+            if(word.includes("mask") ){
+window.location.href="medical-items.html#mask";
+
+    return false;
+   }
+            if(word.includes("gloves")|| word.includes("glove")){
+window.location.href="medical-items.html#gloves";
+
+    return false;
+   }
+            if(word.includes("syringe")){
+window.location.href="medical-items.html#syringe";
+
+    return false;
+   }
+   // If item is not found
+      alert("Item not found");
+    return false;
+    }
+
       </script>
       <script>
         // Global variable to store the promo discount percentage
