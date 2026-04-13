@@ -14,15 +14,100 @@ integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbIT
 crossorigin="anonymous"></script>
 <script type="text/javascript">
     
+ // Function to handle search action
   function validateSearch(){
       let searchBox = document.getElementById("searchInput");
-      if (searchBox.value == "") {
+      let word = searchBox.value.trim().toLowerCase();
+      // check if the search box is empty
+      if (word== "") {
         alert("Please enter a search word");
         searchBox.focus();
         return false;
+
       }
-      return true;
+  // For academic items
+  if(word.includes("pen")){
+    window.location.href="academic_supplies.html#pens";
+    return false;
+  }
+   if(word.includes("notebook")){
+window.location.href="academic_supplies.html#notebooks";
+    return false;
+   }
+      if(word.includes("single book") || word.includes("book") ){
+window.location.href="academic_supplies.html#singlebook";
+    return false;
+   }
+
+  if(word.includes("graphing calculator")|| word.includes("graphing")){
+window.location.href="academic_supplies.html#calculator911";
+    return false;
+   }
+   
+     if(word.includes("calculator" )){
+window.location.href="academic_supplies.html#calculator82";
+    return false;
+   }
+   
+   if(word.includes("note")||word.includes("study") ){
+window.location.href="academic_supplies.html#studynotes";
+
+    return false;
+   }
+   if(word.includes("gray bag") || word.includes("grey bag")){
+    window.location.href="academic_supplies.html#graybag";
+    return false;
+   }
+      if(word.includes("brown bag")){
+    window.location.href="academic_supplies.html#brownbag";
+    return false;
+   }
+      if(word.includes("laptop") || word.includes("computer")){
+window.location.href="academic_supplies.html#laptop";
+
+    return false;
+   }
+    if(word.includes("bag")){
+window.location.href="academic_supplies.html";
+
+    return false;
+   }
+      if(word.includes("lab coat") ){
+window.location.href="medical-items.html#labcoat";
+
+    return false;
+   }
+      if(word.includes("scrubs")){
+window.location.href="medical-items.html#scrubs";
+
+    return false;
+   }
+   
+         if(word.includes("stethoscope")){
+window.location.href="medical-items.html#stethoscope";
+
+    return false;
+   }
+            if(word.includes("mask") ){
+window.location.href="medical-items.html#mask";
+
+    return false;
+   }
+            if(word.includes("gloves")|| word.includes("glove")){
+window.location.href="medical-items.html#gloves";
+
+    return false;
+   }
+            if(word.includes("syringe")){
+window.location.href="medical-items.html#syringe";
+
+    return false;
+   }
+   // If item is not found
+      alert("Item not found");
+    return false;
     }
+
  
 </script>
 </head>
@@ -91,7 +176,7 @@ crossorigin="anonymous"></script>
                  <div class="card h-100">
                      <img src="images/labcoat.jpg" class="card-img-top" alt="Labcoat" width="240" height="210">
                      <div class="card-body text-center">
-                         <h4 class="card-title">Labcoats</h4>
+                         <h4 id="labcoat" class="card-title">Labcoats</h4>
                          <p class="card-text">Sizes: S, M, L</p>
                          <p class="text-primary">15.000 OMR</p>
                          <a href="cart.html" class="btn btn-primary">Add to cart</a>
@@ -103,7 +188,7 @@ crossorigin="anonymous"></script>
                  <div class="card h-100">
                      <img src="images/scrubs.jpg" class="card-img-top" alt="Medical Scrubs" width="240" height="210">
                      <div class="card-body text-center">
-                         <h4 class="card-title">Medical Scrubs</h4>
+                         <h4 id="scrubs" class="card-title">Medical Scrubs</h4>
                          <p class="card-text">Sizes: S, M, L</p>
                          <p class="card-text">Black, dark-blue, light-blue, green</p>
                          <p class="text-primary">10.000 OMR</p>
@@ -116,7 +201,7 @@ crossorigin="anonymous"></script>
                  <div class="card h-100">
                      <img src="images/stethoscope.png" class="card-img-top" alt="Stethoscope" width="240" height="210">
                      <div class="card-body text-center">
-                         <h4 class="card-title">Stethoscope</h4>
+                         <h4 id="stethoscope" class="card-title">Stethoscope</h4>
                          <p class="card-text">Black, blue, brown, pink</p>
                          <p class="text-primary">10.000 OMR</p>
                          <a href="cart.html" class="btn btn-primary">Add to cart</a>
@@ -128,7 +213,7 @@ crossorigin="anonymous"></script>
                  <div class="card h-100">
                      <img src="images/mask.jpg" class="card-img-top" alt="Mask" width="240" height="210">
                      <div class="card-body text-center">
-                         <h4 class="card-title">Medical Grade N95 Face Masks 20 pc</h4>
+                         <h4 id="masks" class="card-title">Medical Grade N95 Face Masks 20 pc</h4>
                          <p class="card-text">Teal, white</p>
                          <p class="text-primary">2.000 OMR</p>
                          <a href="cart.html" class="btn btn-primary">Add to cart</a>
@@ -140,7 +225,7 @@ crossorigin="anonymous"></script>
                  <div class="card h-100">
                      <img src="images/gloves.jpg" class="card-img-top" alt="Gloves" width="240" height="210">
                      <div class="card-body text-center">
-                         <h4 class="card-title">Nitrile Powder-Free Gloves 100 pc</h4>
+                         <h4 id="gloves" class="card-title">Nitrile Powder-Free Gloves 100 pc</h4>
                          <p class="card-text">Sizes: S, M, L</p>
                          <p class="card-text">Blue, white, yellow</p>
                          <p class="text-primary">3.000 OMR</p>
@@ -153,7 +238,7 @@ crossorigin="anonymous"></script>
                  <div class="card h-100">
                      <img src="images/syringe.jpg" class="card-img-top" alt="Syringe" width="240" height="210">
                      <div class="card-body text-center">
-                         <h4 class="card-title">Disposable Syringe 3 pc</h4>
+                         <h4 id="syringe" class="card-title">Disposable Syringe 3 pc</h4>
                          <p class="card-text">Sizes: 1 mL, 5 mL, 10 mL</p>
                          <p class="text-primary">2.000 OMR</p>
                          <a href="cart.html" class="btn btn-primary">Add to cart</a>
