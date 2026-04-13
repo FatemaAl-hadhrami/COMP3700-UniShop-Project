@@ -12,16 +12,98 @@ crossorigin="anonymous">
 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
 crossorigin="anonymous"></script>
 <script type="text/javascript">
+   // Function to handle search action
   function validateSearch(){
       let searchBox = document.getElementById("searchInput");
-      if (searchBox.value == "") {
+      let word = searchBox.value.trim().toLowerCase();
+      // check if the search box is empty
+      if (word== "") {
         alert("Please enter a search word");
         searchBox.focus();
         return false;
 
       }
-      return true;
+  // For academic items
+  if(word.includes("pen")){
+    window.location.href="academic_supplies.html#pens";
+    return false;
+  }
+   if(word.includes("notebook")){
+window.location.href="academic_supplies.html#notebooks";
+    return false;
+   }
+      if(word.includes("single book") || word.includes("book") ){
+window.location.href="academic_supplies.html#singlebook";
+    return false;
+   }
 
+  if(word.includes("graphing calculator")|| word.includes("graphing")){
+window.location.href="academic_supplies.html#calculator911";
+    return false;
+   }
+   
+     if(word.includes("calculator" )){
+window.location.href="academic_supplies.html#calculator82";
+    return false;
+   }
+   
+   if(word.includes("note")||word.includes("study") ){
+window.location.href="academic_supplies.html#studynotes";
+
+    return false;
+   }
+   if(word.includes("gray bag") || word.includes("grey bag")){
+    window.location.href="academic_supplies.html#graybag";
+    return false;
+   }
+      if(word.includes("brown bag")){
+    window.location.href="academic_supplies.html#brownbag";
+    return false;
+   }
+      if(word.includes("laptop") || word.includes("computer")){
+window.location.href="academic_supplies.html#laptop";
+
+    return false;
+   }
+    if(word.includes("bag")){
+window.location.href="academic_supplies.html";
+
+    return false;
+   }
+      if(word.includes("lab coat") ){
+window.location.href="medical-items.html#labcoat";
+
+    return false;
+   }
+      if(word.includes("scrubs")){
+window.location.href="medical-items.html#scrubs";
+
+    return false;
+   }
+   
+         if(word.includes("stethoscope")){
+window.location.href="medical-items.html#stethoscope";
+
+    return false;
+   }
+            if(word.includes("mask") ){
+window.location.href="medical-items.html#mask";
+
+    return false;
+   }
+            if(word.includes("gloves")|| word.includes("glove")){
+window.location.href="medical-items.html#gloves";
+
+    return false;
+   }
+            if(word.includes("syringe")){
+window.location.href="medical-items.html#syringe";
+
+    return false;
+   }
+   // If item is not found
+      alert("Item not found");
+    return false;
     }
 
   
@@ -106,7 +188,7 @@ crossorigin="anonymous"></script>
     <img src="images/ballpoint-pens.png" class="card-img-top" alt="pens" width="240" height="210" >
            <div class="card-body text-center">
 
-            <h4 class="card-title">Pens</h4>
+            <h4 id="pens" class="card-title">Pens</h4>
             <p class="card-text">Black, purple, green, orange, red, pink, light-blue, dark-blue</p>
             <p class="text-primary">0.650 OMR</p>
             <a href="cart.html" class="btn btn-primary">Add to cart</a>
@@ -119,7 +201,7 @@ crossorigin="anonymous"></script>
 
            <img  src="images/One_140pages_notebool.png" alt="One book" class="card-img-top" width="240" height="210">
           <div  class="card-body text-center">
-          <h4  class="card-title">Single book</h4>
+          <h4  id="singlebook" class="card-title">Single book</h4>
           <p class="card-text">140-page single blue notebook</p>
              <p  class="text-primary"><b>0.800 OMR</b></p>
            <a  href="cart.html" class="btn btn-primary">Add to cart</a>
@@ -130,7 +212,7 @@ crossorigin="anonymous"></script>
         <div class ="card h-100">
           <img src ="images/200pages_4_notebooks.jpg" alt="4 Note books" class="card-img-top" width="240" height="210">
           <div class ="card-body text-center">
-            <h4 class = "card-title">Pack of 4 notebooks</h4>
+            <h4 id="notebooks" class = "card-title">Pack of 4 notebooks</h4>
             <p class ="card-text"  >A pack of 4 notebooks each with 200 pages</p>
             <p class = "text-primary"><b>1.200 OMR</b></p>
             <a href  ="cart.html"  class ="btn btn-primary">Add to cart</a>
@@ -142,7 +224,7 @@ crossorigin="anonymous"></script>
         <div class="card h-100">
           <img src="images/Casio_fx9911es_plus_scientific_calc.jpg" alt="scientific Calculators" class="card-img-top" width="240" height="210" >
        <div class="card-body text-center">
-         <h4 class="card-title">fx-9911ES PLUS scientific calculator</h4>
+         <h4 id="Calculator911" class="card-title">fx-9911ES PLUS scientific calculator</h4>
           <p class="text-primary"><b>4.000 OMR</b></p>
          <a href="cart.html" class="btn btn-primary">Add to cart</a>
           </div>
@@ -156,7 +238,7 @@ crossorigin="anonymous"></script>
      <div class="card h-100">
          <img src="images/Casio_fx82es_plus_scientific_calc.png" alt="scientific Calculators" class="card-img-top"  width="240" height="210">
           <div class="card-body text-center">
-            <h4 class="card-title">fx-82ES PLUS scientific calculator</h4>
+            <h4 id="calculator82" class="card-title">fx-82ES PLUS scientific calculator</h4>
         <p class="text-primary"><b>2.150 OMR</b></p>
               <a href="cart.html" class="btn btn-primary">Add to cart</a>
           </div>
@@ -166,7 +248,7 @@ crossorigin="anonymous"></script>
         <div class="card h-100">
         <img src = "images/web_study_notes.png" alt="Study notes" class="card-img-top" width="240" height="210">
           <div class= "card-body text-center">
-         <h4 class= "card-title">Study Notes for Web Computing</h4>
+         <h4 id="studynotes" class= "card-title">Study Notes for Web Computing</h4>
           <p  class="text-primary"><b>0.300 OMR</b></p>
          <a  href="cart.html" class="btn btn-primary">Add to cart</a>
           </div>
@@ -177,7 +259,7 @@ crossorigin="anonymous"></script>
         <div class="card h-100">
           <img src="images/back_pack.jpg" alt="Backpack" class="card-img-top" width="240" height="210">
          <div class="card-body text-center">
-         <h4 class="card-title">Gray backpack</h4>
+         <h4 id="graybag" class="card-title">Gray backpack</h4>
             <p class="text-primary"><b>1.000 OMR</b></p>
         <a href="cart.html" class="btn btn-primary">Add to cart</a>
           </div>
@@ -187,7 +269,7 @@ crossorigin="anonymous"></script>
         <div   class="card h-100">
           <img src="images/lap_top_bag_15.6Inches.jpg" alt="Laptop bag" class="card-img-top" width="240" height="210">
     <div class="card-body text-center">
-        <h4  class="card-title">Black laptop bag 15.6 inches</h4>
+        <h4 id="laptop" class="card-title">Black laptop bag 15.6 inches</h4>
          <p   class="text-primary"><b>1.000 OMR</b></p>
      <a href="cart.html" class="btn btn-primary">Add to cart</a>
           </div>
@@ -201,7 +283,7 @@ crossorigin="anonymous"></script>
         <div class="card h-100">
        <img src="images/Tote_bag.jpg" alt="Tote bag" class="card-img-top" width="240" height="210">
           <div class="card-body text-center">
-    <h4 class="card-title">Brown tote bag</h4>
+    <h4 id="brownbag" class="card-title">Brown tote bag</h4>
           <p class="text-primary" ><b>0.900 OMR</b></p>
               <a  href= "cart.html" class="btn btn-primary">Add to cart</a>
           </div>
