@@ -7,103 +7,6 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript">
-  // Function to handle search action
-  function validateSearch(){
-      let searchBox = document.getElementById("searchInput");
-      let word = searchBox.value.trim().toLowerCase();
-      // check if the search box is empty
-      if (word== "") {
-        alert("Please enter a search word");
-        searchBox.focus();
-        return false;
-
-      }
-  // For academic items
-  if(word.includes("pen")){
-    window.location.href="academic_supplies.html#pens";
-    return false;
-  }
-   if(word.includes("notebook")){
-window.location.href="academic_supplies.html#notebooks";
-    return false;
-   }
-      if(word.includes("single book") || word.includes("book") ){
-window.location.href="academic_supplies.html#singlebook";
-    return false;
-   }
-
-  if(word.includes("graphing calculator")|| word.includes("graphing")){
-window.location.href="academic_supplies.html#calculator911";
-    return false;
-   }
-   
-     if(word.includes("calculator" )){
-window.location.href="academic_supplies.html#calculator82";
-    return false;
-   }
-   
-   if(word.includes("note")||word.includes("study") ){
-window.location.href="academic_supplies.html#studynotes";
-
-    return false;
-   }
-   if(word.includes("gray bag") || word.includes("grey bag")){
-    window.location.href="academic_supplies.html#graybag";
-    return false;
-   }
-      if(word.includes("brown bag")){
-    window.location.href="academic_supplies.html#brownbag";
-    return false;
-   }
-      if(word.includes("laptop") || word.includes("computer")){
-window.location.href="academic_supplies.html#laptop";
-
-    return false;
-   }
-    if(word.includes("bag")){
-window.location.href="academic_supplies.html";
-
-    return false;
-   }
-      if(word.includes("lab coat") ){
-window.location.href="medical-items.html#labcoat";
-
-    return false;
-   }
-      if(word.includes("scrubs")){
-window.location.href="medical-items.html#scrubs";
-
-    return false;
-   }
-   
-         if(word.includes("stethoscope")){
-window.location.href="medical-items.html#stethoscope";
-
-    return false;
-   }
-            if(word.includes("mask") ){
-window.location.href="medical-items.html#mask";
-
-    return false;
-   }
-            if(word.includes("gloves")|| word.includes("glove")){
-window.location.href="medical-items.html#gloves";
-
-    return false;
-   }
-            if(word.includes("syringe")){
-window.location.href="medical-items.html#syringe";
-
-    return false;
-   }
-   // If item is not found
-      alert("Item not found");
-    return false;
-    }
-
-  
-</script>
 </head>
 
 <body class="bg-light">
@@ -119,17 +22,17 @@ window.location.href="medical-items.html#syringe";
     </div>
 
     <div class="col-md-6">
-      <form action="#" method="get">
-        <div class="row">
-          <div class="col-8">
-            <input type="text" class="form-control" placeholder="Search...">
-          </div>
-          <div class="col-4">
-            <button class="btn btn-primary w-100">Search</button>
-          </div>
-        </div>
-      </form>
+  <form onsubmit="return validateSearch()">
+    <div class="row">
+      <div class="col-8">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+      </div>
+      <div class="col-4">
+        <input type="submit" value="Search" class="btn btn-primary w-100">
+      </div>
     </div>
+  </form>
+</div>
 
     <div class="col-md-4 text-end">
       <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
@@ -141,7 +44,7 @@ window.location.href="medical-items.html#syringe";
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
-    <div class="navbar-nav flex-wrap">
+    <div class="navbar-nav">
       <a class="nav-link" href="index.html">Home</a>
       <a class="nav-link" href="About_us.html">About Us</a>
       <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
@@ -153,7 +56,7 @@ window.location.href="medical-items.html#syringe";
       <a class="nav-link" href="questionnaire.html">Questionnaire</a>
       <a class="nav-link" href="calculator.html">Calculator</a>
       <a class="nav-link" href="funpage.html">Fun Page</a>
-    </div>
+1111</div>
   </div>
 </nav>
 
