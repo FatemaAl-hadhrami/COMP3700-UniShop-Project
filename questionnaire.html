@@ -176,6 +176,14 @@ window.location.href="medical-items.html#syringe";
         if (radiochecker(radios) == false){
             return false;
         }
+        // alert if "other" was picked for "how did you find out about unishop" and nothing was entered in the textbox
+        let otherCheck = document.getElementById("other");
+        let otherContent = document.getElementById("optBox");
+        if ((otherCheck.checked)&&(otherContent.value ==""){
+          alert("Please specify how you found out about Unishop.");
+          otherContent.focus();
+          return false;
+        }
         return true;
 
     } 
@@ -191,7 +199,6 @@ window.location.href="medical-items.html#syringe";
         }
         if(checker == false){
             alert("Please select an option.");
-            radios.focus();
         }
         return checker;
     }
