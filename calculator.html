@@ -111,7 +111,7 @@ window.location.href="medical-items.html#syringe";
         var promoDiscount = 0;
         /**
        * Applies promo code and updates the discount percentage.
-       * Supports "UNISHOP10" (10% off) and "SQU5" (5% off).
+       * "UNISHOP10" (10% off) and "SQU5" (5% off).
        */
         function applyPromo() {
           var code = document.getElementById("promoCode").value.trim().toUpperCase();
@@ -163,6 +163,10 @@ window.location.href="medical-items.html#syringe";
               selectedItems.push({ name: itemName, qty: qty, price: price, total: lineTotal });
             }
           }
+          if (selectedItems.length === 0) {
+            alert("Please select at least one item");
+            return;
+          }
 
           /* Step 2: Age-based discount */
           var age = parseInt(document.getElementById("customerAge").value) || 0;
@@ -177,7 +181,7 @@ window.location.href="medical-items.html#syringe";
             discountReason = "Senior Citizen Discount (60+)";
           }
 
-          /* Step 3: Combine discounts */
+          /* Step 3: Total discount */
           var totalDiscountPct = ageDiscount + promoDiscount;
 
           /* Step 4: Apply discount */
@@ -195,13 +199,6 @@ window.location.href="medical-items.html#syringe";
 
           /* Render items breakdown */
           var breakdownEl = document.getElementById("itemsBreakdown");
-
-          if (selectedItems.length === 0) {
-            breakdownEl.innerHTML = "<div class='alert alert-warning'>Please select at least one item.</div>";
-            document.getElementById("totalsSection").classList.add("d-none");
-            document.getElementById("discountBadge").classList.add("d-none");
-            return;
-          }
 
           var rows = "";
           for (var i = 0; i < selectedItems.length; i++) {
@@ -326,19 +323,27 @@ window.location.href="medical-items.html#syringe";
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">    
-    <div class="navbar-nav flex-wrap">
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="About_us.html">About Us</a>
-      <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
-      <a class="nav-link" href="medical-items.html">Medical &amp; Laboratory Items</a>
-      <a class="nav-link" href="contact_us.html">Contact Us</a>
-      <a class="nav-link" href="cart.html">My Cart</a>
-      <a class="nav-link" href="login_and_registration.html">Login</a>
-      <a class="nav-link" href="order_tracking.html">Order Tracking</a>
-      <a class="nav-link" href="questionnaire.html">Questionnaire</a>
-      <a class="nav-link active" href="calculator.html">Calculator</a>
-      <a class="nav-link" href="funpage.html">Fun Page</a>
-    </div>
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="collapse navbar-collapse" id="mainNav">
+        <div class="navbar-nav flex-wrap">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="About_us.html">About Us</a>
+          <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
+          <a class="nav-link" href="medical-items.html">Medical &amp; Laboratory Items</a>
+          <a class="nav-link" href="contact_us.html">Contact Us</a>
+          <a class="nav-link" href="cart.html">My Cart</a>
+          <a class="nav-link" href="login_and_registration.html">Login</a>
+          <a class="nav-link" href="order_tracking.html">Order Tracking</a>
+          <a class="nav-link" href="questionnaire.html">Questionnaire</a>
+          <a class="nav-link active" href="calculator.html">Calculator</a>
+          <a class="nav-link" href="funpage.html">Fun Page</a>
+        </div>
+     </div>
   </div>
 </nav>
 
@@ -498,9 +503,7 @@ window.location.href="medical-items.html#syringe";
 
           <div class="row g-3 align-items-end mb-2">
             <div class="col-8">
-              <label for="promoCode" class="form-label fw-bold small text-primary">
-                Promo Code (optional)
-              </label>
+              <label class="form-label fw-bold small text-primary">Promo Code </label>
               <input type="text" id="promoCode" class="form-control"
                      placeholder="e.g. UNISHOP10" maxlength="12" />
               <div class="form-text">Try: <strong>UNISHOP10</strong> (10% off) or <strong>SQU5</strong> (5% off)</div>
@@ -514,8 +517,7 @@ window.location.href="medical-items.html#syringe";
 
           <div class="d-grid mt-3">
             <button type="button" class="btn btn-primary btn-lg fw-bold"
-                    onclick="calculateBill()">
-              Calculate My Bill
+                    onclick="calculateBill()">Calculate My Bill
             </button>
           </div>
 
@@ -530,8 +532,8 @@ window.location.href="medical-items.html#syringe";
           <h5 class="fw-bold text-primary mb-4"> Bill Summary</h5>
 
           <div id="discountBadge" class="mb-3 d-none"></div>
-
           <div id="itemsBreakdown">
+            
             <p class="text-muted text-center py-4">
               Select items and click <strong>Calculate My Bill</strong>
               to see your summary here.
