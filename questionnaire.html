@@ -120,7 +120,7 @@ window.location.href="medical-items.html#syringe";
             return false;
         }
         //alert if email format is incorrect and focus on email
-        if ((emailadd.value.indexOf("@", 0) < 0) || (emailadd.value.indexOf(".", 0) < 0)){
+        if ((emailadd.value.indexOf("@", 0) <= 0) || (emailadd.value.indexOf(".", 0) <= 0)){
             alert("Please enter a valid email address.");
             emailadd.focus();
             return false;
@@ -128,6 +128,11 @@ window.location.href="medical-items.html#syringe";
         //alert if username field is empty and focus on username 
         if (username.value == ""){
             alert("Please enter your full name.");
+            username.focus();
+            return false;
+        }
+        if (username.value.search(/d+/) !== -1){
+            alert("Usernames cannot contain numbers. Please enter a valid username.")
             username.focus();
             return false;
         }
@@ -196,7 +201,9 @@ window.location.href="medical-items.html#syringe";
         const agedisplay = document.getElementById("ageGroup");
         agedisplay.innerText = agegroup;
     }
-    
+    function askbox(){
+        document.getElementById("optBox").style.display = "block";
+    }
     </script>
   
 </head>
@@ -323,7 +330,7 @@ window.location.href="medical-items.html#syringe";
             <label for="acastaff"> Academic Staff</label>
             <input type="checkbox" name="sources" id="acastaff" value="Academic Staff">
             <label for="specify">Other</label>
-            <input type="checkbox" name="sources" id="other" value="Other">
+            <input type="checkbox" name="sources" id="other" value="Other" onclick="askbox()">
             <input type="text" id="optBox" style="display: none;">
           </div>
 
