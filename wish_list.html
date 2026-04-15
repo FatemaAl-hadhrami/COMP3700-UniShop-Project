@@ -11,6 +11,101 @@ crossorigin="anonymous">
 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
 crossorigin="anonymous"></script>
 <script type="text/javascript">
+      // Function to handle search action
+  function validateSearch(){
+      let searchBox = document.getElementById("searchInput");
+      let word = searchBox.value.trim().toLowerCase();
+      // check if the search box is empty
+      if (word== "") {
+        alert("Please enter a search word");
+        searchBox.focus();
+        return false;
+
+      }
+  // For academic items
+  if(word.includes("pen")){
+    window.location.href="academic_supplies.html#pens";
+    return false;
+  }
+   if(word.includes("notebook")){
+window.location.href="academic_supplies.html#notebooks";
+    return false;
+   }
+      if(word.includes("single book") || word.includes("book") ){
+window.location.href="academic_supplies.html#singlebook";
+    return false;
+   }
+
+  if(word.includes("graphing calculator")|| word.includes("graphing")){
+window.location.href="academic_supplies.html#calculator911";
+    return false;
+   }
+   
+     if(word.includes("calculator" )){
+window.location.href="academic_supplies.html#calculator82";
+    return false;
+   }
+   
+   if(word.includes("note")||word.includes("study") ){
+window.location.href="academic_supplies.html#studynotes";
+
+    return false;
+   }
+   if(word.includes("gray bag") || word.includes("grey bag")){
+    window.location.href="academic_supplies.html#graybag";
+    return false;
+   }
+      if(word.includes("brown bag")){
+    window.location.href="academic_supplies.html#brownbag";
+    return false;
+   }
+      if(word.includes("laptop") || word.includes("computer")){
+window.location.href="academic_supplies.html#laptop";
+
+    return false;
+   }
+    if(word.includes("bag")){
+window.location.href="academic_supplies.html";
+
+    return false;
+   }
+      if(word.includes("lab coat") ){
+window.location.href="medical-items.html#labcoat";
+
+    return false;
+   }
+      if(word.includes("scrubs")){
+window.location.href="medical-items.html#scrubs";
+
+    return false;
+   }
+   
+         if(word.includes("stethoscope")){
+window.location.href="medical-items.html#stethoscope";
+
+    return false;
+   }
+            if(word.includes("mask") ){
+window.location.href="medical-items.html#mask";
+
+    return false;
+   }
+            if(word.includes("gloves")|| word.includes("glove")){
+window.location.href="medical-items.html#gloves";
+
+    return false;
+   }
+            if(word.includes("syringe")){
+window.location.href="medical-items.html#syringe";
+
+    return false;
+   }
+   // If item is not found
+      alert("Item not found");
+    return false;
+    }
+
+  
     // constructor for academic items
     function AcademicItem(name, price){
         this.name = name;
@@ -22,19 +117,9 @@ crossorigin="anonymous"></script>
         this.price=price;
     }
     // array to store academic items
-    let academicItems =[
-        new AcademicItem("Pens",0.650),
-            new AcademicItem("Single book",0.800),
-              new AcademicItem("Notebooks",1.200)
-         
-   
-   ];
+    let academicItems =[];
    // array to store medical items
-   let medicalItems = [
-    new MedicalItem("labcoat",15.000),
-    new MedicalItem("scrubs",10.000),
-new MedicalItem("stethoscope",10.000)
-   ];
+   let medicalItems = [];
    //Function to Display the academic items in the table
    function displayAcademicItems(data=academicItems){
     let table=document.getElementById("academicTable");
@@ -72,51 +157,64 @@ new MedicalItem("stethoscope",10.000)
    function searchAcademicItems(){
     // get the user's input and convert it to lower case
     let value =document.getElementById("academicSearch").value.toLowerCase();
-       // If the inpt is empty show all the items
+     // get the result table
+     let resultTable =document.getElementById("academicResultTable");
+    // clear the result table
+    resultTable.innerHTML="";
+     // If the inpt is empty show all the items
     if(value ===""){
         displayAcademicItems(academicItems);
         return;
     }
-    let filtered = [];
     // loop through the items and find matches
     for(let i=0;i<academicItems.length;i++){
         let name=academicItems[i].name.toLowerCase();
         if(name.indexOf(value)!=-1){
-            filtered.push(academicItems[i]);
+           resultTable.innerHTML += 
+              "<tr>" +
+           "<td>"+ academicItems[i].name + "</td>"+
+           "<td>"+ academicItems[i].price + "</td>"+
+            "</tr>";
+            
         }
     
-    
     }
-    //Display the filtered results
-    displayAcademicItems(filtered);
-   }
+    }
+ 
+   
 
       // Function to search for medical items based on the user's input
       function searchMedicalItems(){
 
             // get the user's input and convert it to lower case
     let value =document.getElementById("medicalSearch").value.toLowerCase();
-
+    // get the result table
+    let resultTable=document.getElementById("medicalResultTable");
+    //clear previous result
+    resultTable.innerHTML=""
     // If the input is empty show all the items
     if(value ===""){
         displayMedicalItems(medicalItems);
         return;
     }
-    let filtered = [];
+
 
         // loop through the items and find matches
     for(let i=0;i<medicalItems.length;i++){
         let name=medicalItems[i].name.toLowerCase();
        
         if(name.indexOf(value)!=-1){
-            filtered.push(medicalItems[i]);
+            resultTable.innerHTML += 
+              "<tr>" +
+           "<td>"+ medicalItems[i].name + "</td>"+
+           "<td>"+ medicalItems[i].price + "</td>"+
+            "</tr>";
         }
     
     
     }
-        //Display the filtered results
+    
 
-    displayMedicalItems(filtered);
    }
    // function to add new academic item to the array
    function addAcademicItem(){
@@ -163,9 +261,67 @@ new MedicalItem("stethoscope",10.000)
    displayMedicalItems(medicalItems);
 </script>
 </head>
-<body>
+<body class="bg-light">
+     <header class="container-fluid bg-white" >
+    <div class="row align-items-center  p-4">
+       <div class="col-md-2">
+        <p class="h3 text-primary">UniShop</p>
+
+      <a href="index.html">
+        <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" class="img-fluid"/>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <form action="https://httpbin.org/get" method="get" onsubmit="return validateSearch()">
+          <div class="row">
+                        <div class="col-8">
+        <input type="text" id="searchInput" name="query" class="form-control"/>
+        </div>
+        <div class="col-4">
+
+        <input type="submit" value="Search" class="btn btn-primary"/>
+      </div>
+      </div>
+      </form>
+    </div>
+    <div class="col-md-4 text-end">
+      <a class="btn btn-outline-primary" href="login_and_registration.html">Login / Register</a>
+      <a class="btn btn-outline-primary fs-4" href="cart.html" >
+        🛒
+        <span class="text-danger">0</span>
+      </a>
+    </div>
+    </div>
+    </header>
+       <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+           <div class="container-fluid">
+      <div class="navbar-nav">
+
+      <a class="nav-link"  href="index.html">Home</a>
+          
+            <a class="nav-link " href="About_us.html">About Us</a>
+           
+            <a  class="nav-link" href="academic_supplies.html">Academic Supplies</a>
+           
+            <a class="nav-link"  href="medical-items.html">Medical & Laboratory Items</a>
+          
+            <a  class="nav-link" href="contact_us.html">Contact Us</a>
+            <a  class="nav-link" href="cart.html">My Cart</a>
+            <a class="nav-link"  href="login_and_registration.html">Login</a>
+            <a  class="nav-link" href="order_tracking.html">Order Tracking</a>
+             <a  class="nav-link" href="questionnaire.html">Questionnaire</a>
+             <a  class="nav-link" href="calculator.html">Calculator</a>
+            <a  class="nav-link" href="funpage.html">Fun Page</a>
+             <a class="nav-link active" href="wish_list.html">Wish List</a>
+        </div>
+    </div>
+
+          </nav>
+          <div class="container mt-4 mb-4">
+
     <h1 class="text-center mb-4">My Wish List</h1>
-    <p class="text-center">Here you can search, view and add items to your personal wishlist!🌠 </p>
+    <p class="text-center">Here you can add and manage items you wish to buy from Unishop!🌠 </p>
 
   <div class="container my-4">
     <h2 class="mb-3">Academic Supplies</h2>
@@ -178,10 +334,20 @@ new MedicalItem("stethoscope",10.000)
         <th>Price</th>
      </tr>
      </thead>
- 
-        <tbody id="academicTable"></tbody>
+             <tbody id="academicTable"></tbody>
 
     </table>
+     <h4 class="mt-4">Search Result</h4>
+     <table class="table table-bordered table-striped">
+        <thead class="table-info">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="academicResultTable"></tbody>
+     </table>
+    
   <h4 class="mt-4">Add academic item</h4>
    <input type="text" id="academicName" class="form-control mb-2" placeholder="Item name">
     <input type="text" id="academicPrice" class="form-control mb-2" placeholder="Item price">
@@ -201,13 +367,26 @@ new MedicalItem("stethoscope",10.000)
      </thead>
  
         <tbody id="medicalTable"></tbody>
-
-    </table>
+        </table>
+      <h4 class="mt-4">Search Result</h4>
+      <table class="table table-bordered table-striped">
+        <thead class="table-info">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="medicalResultTable"></tbody>
+      </table>
+   
   <h4 class="mt-4">Add Medical item</h4>
    <input type="text" id="medicalName" class="form-control mb-2" placeholder="Item name">
     <input type="text" id="medicalPrice" class="form-control mb-2" placeholder="Item price">
     <button class="btn btn-success" onclick="addMedicalItem()">Add Medical Item to wish list</button>
 </div>
-
+</div>
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
+</footer>
 </body>
 </html>
