@@ -115,18 +115,12 @@ window.location.href="medical-items.html#syringe";
         checker = false;
         //alert if email field is empty and focus on email
         if (emailadd.value == ""){
-            alert("Please enter a valid email address.");
+            alert("Please enter an email address.");
             emailadd.focus();
             return false;
         }
         //alert if email format is incorrect and focus on email
-        if (emailadd.value.indexOf("@", 0) < 0){
-            alert("Please enter a valid email address.");
-            emailadd.focus();
-            return false;
-        }
-        //alert if email format is incorrect and focus on email
-        if (emailadd.value.indexOf(".", 0) < 0){
+        if ((emailadd.value.indexOf("@", 0) < 0) || (emailadd.value.indexOf(".", 0) < 0)){
             alert("Please enter a valid email address.");
             emailadd.focus();
             return false;
@@ -251,6 +245,7 @@ window.location.href="medical-items.html#syringe";
                 <a class="nav-link active" href="questionnaire.html">Questionnaire</a>
                 <a class="nav-link" href="calculator.html">Calculator</a>
                 <a class="nav-link" href="funpage.html">Fun Page</a>
+                <a class="nav-link " href="wish_list.html">Wish List</a>
             </div>
         </div>
     </nav>
