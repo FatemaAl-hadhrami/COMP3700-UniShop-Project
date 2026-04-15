@@ -131,7 +131,7 @@ window.location.href="medical-items.html#syringe";
             username.focus();
             return false;
         }
-        if (username.value.search(/d+/) !== -1){
+        if (username.value.search(/\d+/) !== -1){
             alert("Usernames cannot contain numbers. Please enter a valid username.")
             username.focus();
             return false;
