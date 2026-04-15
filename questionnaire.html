@@ -120,7 +120,7 @@ window.location.href="medical-items.html#syringe";
             return false;
         }
         //alert if email format is incorrect (email cannot start with or exclude @ or .) and focus on email
-        if ((emailadd.value.search(/@/) <= 0) || (emailadd.value.search(/./) <= 0 )){
+        if ((emailadd.value.search(/@/) <= 0) || (emailadd.value.search(/\./) <= 0 )){
             alert("Please enter a valid email address.");
             emailadd.focus();
             return false;
