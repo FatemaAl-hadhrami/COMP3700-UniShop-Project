@@ -184,6 +184,12 @@ window.location.href="medical-items.html#syringe";
           otherContent.focus();
           return false;
         }
+      //alert if "other" textbox does not contain any word characters
+        if ((otherContent.value != "")&&(otherContent.value.search(/\w+/)==-1)){
+          alert("Please enter valid (word) characters.");
+          otherContent.focus();
+          return false;
+        }
         return true;
 
     } 
