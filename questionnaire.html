@@ -112,7 +112,7 @@ window.location.href="medical-items.html#syringe";
         let username = document.getElementById("name");
         var radios;
         var x = 0;
-        checker = false;
+        var checker = false;
         //alert if email field is empty and focus on email
         if (emailadd.value == ""){
             alert("Please enter an email address.");
@@ -179,7 +179,7 @@ window.location.href="medical-items.html#syringe";
         // alert if "other" was picked for "how did you find out about unishop" and nothing was entered in the textbox
         let otherCheck = document.getElementById("other");
         let otherContent = document.getElementById("optBox");
-        if ((otherCheck.checked)&&(otherContent.value ==""){
+        if ((otherCheck.checked)&&(otherContent.value =="")){
           alert("Please specify how you found out about Unishop.");
           otherContent.focus();
           return false;
