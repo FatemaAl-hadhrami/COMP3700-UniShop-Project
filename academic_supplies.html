@@ -106,6 +106,28 @@ window.location.href="medical-items.html#syringe";
     return false;
     }
 
+    function addToCart(itemName, itemPrice) {
+    let cart = localStorage.getItem("cart");
+    
+    if (cart == null) {
+        cart = [];
+    } else {
+        cart = JSON.parse(cart);
+    }
+
+    let item = {
+        name: itemName,
+        price: itemPrice,
+        qty: 1
+    };
+
+    cart.push(item);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(itemName + " added to cart");
+    return false;
+}
+
   
 </script>
 </head>
@@ -170,7 +192,6 @@ window.location.href="medical-items.html#syringe";
              <a  class="nav-link" href="questionnaire.html">Questionnaire</a>
              <a  class="nav-link" href="calculator.html">Calculator</a>
             <a  class="nav-link" href="funpage.html">Fun Page</a>
-           <a class="nav-link " href="wish_list.html">Wish List</a>
               </div>
             </div>
            </div>
@@ -199,7 +220,7 @@ window.location.href="medical-items.html#syringe";
             <h4 id="pens" class="card-title">Pens</h4>
             <p class="card-text">Black, purple, green, orange, red, pink, light-blue, dark-blue</p>
             <p class="text-primary">0.650 OMR</p>
-            <a href="cart.html" class="btn btn-primary">Add to cart</a>
+            <a href="cart.html" class="btn btn-primary" onclick="return addToCart('Pens', 0.650)">Add to cart</a>
         
         </div>
            </div>
@@ -212,7 +233,7 @@ window.location.href="medical-items.html#syringe";
           <h4  id="singlebook" class="card-title">Single book</h4>
           <p class="card-text">140-page single blue notebook</p>
              <p  class="text-primary"><b>0.800 OMR</b></p>
-           <a  href="cart.html" class="btn btn-primary">Add to cart</a>
+           <a href="cart.html" class="btn btn-primary" onclick="return addToCart('Single book', 0.800)">Add to cart</a>
       </div>
         </div>
          </div>
@@ -223,7 +244,7 @@ window.location.href="medical-items.html#syringe";
             <h4 id="notebooks" class = "card-title">Pack of 4 notebooks</h4>
             <p class ="card-text"  >A pack of 4 notebooks each with 200 pages</p>
             <p class = "text-primary"><b>1.200 OMR</b></p>
-            <a href  ="cart.html"  class ="btn btn-primary">Add to cart</a>
+            <a href="cart.html" class="btn btn-primary" onclick="return addToCart('Pack of 4 notebooks', 1.200)">Add to cart</a>
           </div>
         </div>
       </div>
@@ -234,7 +255,7 @@ window.location.href="medical-items.html#syringe";
        <div class="card-body text-center">
          <h4 id="Calculator911" class="card-title">fx-9911ES PLUS scientific calculator</h4>
           <p class="text-primary"><b>4.000 OMR</b></p>
-         <a href="cart.html" class="btn btn-primary">Add to cart</a>
+         <a href="cart.html" class="btn btn-primary" onclick="return addToCart('fx-9911ES PLUS scientific calculator', 4.000)">Add to cart</a>
           </div>
            </div>
           </div>
@@ -248,7 +269,7 @@ window.location.href="medical-items.html#syringe";
           <div class="card-body text-center">
             <h4 id="calculator82" class="card-title">fx-82ES PLUS scientific calculator</h4>
         <p class="text-primary"><b>2.150 OMR</b></p>
-              <a href="cart.html" class="btn btn-primary">Add to cart</a>
+              <a href="cart.html" class="btn btn-primary" onclick="return addToCart('fx-82ES PLUS scientific calculator', 2.150)">Add to cart</a>
           </div>
       </div>
       </div>
@@ -258,7 +279,7 @@ window.location.href="medical-items.html#syringe";
           <div class= "card-body text-center">
          <h4 id="studynotes" class= "card-title">Study Notes for Web Computing</h4>
           <p  class="text-primary"><b>0.300 OMR</b></p>
-         <a  href="cart.html" class="btn btn-primary">Add to cart</a>
+         <a href="cart.html" class="btn btn-primary" onclick="return addToCart('Study Notes for Web Computing', 0.300)">Add to cart</a>
           </div>
       </div>
       </div>
@@ -269,7 +290,7 @@ window.location.href="medical-items.html#syringe";
          <div class="card-body text-center">
          <h4 id="graybag" class="card-title">Gray backpack</h4>
             <p class="text-primary"><b>1.000 OMR</b></p>
-        <a href="cart.html" class="btn btn-primary">Add to cart</a>
+        <a href="cart.html" class="btn btn-primary" onclick="return addToCart('Gray backpack', 1.000)">Add to cart</a>
           </div>
         </div>
          </div>
@@ -279,7 +300,7 @@ window.location.href="medical-items.html#syringe";
     <div class="card-body text-center">
         <h4 id="laptop" class="card-title">Black laptop bag 15.6 inches</h4>
          <p   class="text-primary"><b>1.000 OMR</b></p>
-     <a href="cart.html" class="btn btn-primary">Add to cart</a>
+     <a href="cart.html" class="btn btn-primary" onclick="return addToCart('Black laptop bag 15.6 inches', 1.000)">Add to cart</a>
           </div>
         </div>
       </div>
@@ -293,7 +314,7 @@ window.location.href="medical-items.html#syringe";
           <div class="card-body text-center">
     <h4 id="brownbag" class="card-title">Brown tote bag</h4>
           <p class="text-primary" ><b>0.900 OMR</b></p>
-              <a  href= "cart.html" class="btn btn-primary">Add to cart</a>
+              <a href="cart.html" class="btn btn-primary" onclick="return addToCart('Brown tote bag', 0.900)">Add to cart</a>
           </div>
           </div>
           </div>
