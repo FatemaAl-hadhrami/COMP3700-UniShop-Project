@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish List</title>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+crossorigin="anonymous"></script>
+<script type="text/javascript">
+      // Function to handle search action
+  function validateSearch(){
+      let searchBox = document.getElementById("searchInput");
+      let word = searchBox.value.trim().toLowerCase();
+      // check if the search box is empty
+      if (word== "") {
+        alert("Please enter a search word");
+        searchBox.focus();
+        return false;
+
+      }
+  // For academic items
+  if(word.includes("pen")){
+    window.location.href="academic_supplies.html#pens";
+    return false;
+  }
+   if(word.includes("notebook")){
+window.location.href="academic_supplies.html#notebooks";
+    return false;
+   }
+      if(word.includes("single book") || word.includes("book") ){
+window.location.href="academic_supplies.html#singlebook";
+    return false;
+   }
+
+  if(word.includes("graphing calculator")|| word.includes("graphing")){
+window.location.href="academic_supplies.html#calculator911";
+    return false;
+   }
+   
+     if(word.includes("calculator" )){
+window.location.href="academic_supplies.html#calculator82";
+    return false;
+   }
+   
+   if(word.includes("note")||word.includes("study") ){
+window.location.href="academic_supplies.html#studynotes";
+
+    return false;
+   }
+   if(word.includes("gray bag") || word.includes("grey bag")){
+    window.location.href="academic_supplies.html#graybag";
+    return false;
+   }
+      if(word.includes("brown bag")){
+    window.location.href="academic_supplies.html#brownbag";
+    return false;
+   }
+      if(word.includes("laptop") || word.includes("computer")){
+window.location.href="academic_supplies.html#laptop";
+
+    return false;
+   }
+    if(word.includes("bag")){
+window.location.href="academic_supplies.html";
+
+    return false;
+   }
+      if(word.includes("lab coat") ){
+window.location.href="medical-items.html#labcoat";
+
+    return false;
+   }
+      if(word.includes("scrubs")){
+window.location.href="medical-items.html#scrubs";
+
+    return false;
+   }
+   
+         if(word.includes("stethoscope")){
+window.location.href="medical-items.html#stethoscope";
+
+    return false;
+   }
+            if(word.includes("mask") ){
+window.location.href="medical-items.html#mask";
+
+    return false;
+   }
+            if(word.includes("gloves")|| word.includes("glove")){
+window.location.href="medical-items.html#gloves";
+
+    return false;
+   }
+            if(word.includes("syringe")){
+window.location.href="medical-items.html#syringe";
+
+    return false;
+   }
+   // If item is not found
+      alert("Item not found");
+    return false;
+    }
+
+  
+   
+   
+</script>
+</head>
+<body class="bg-light">
+     <header class="container-fluid bg-white" >
+    <div class="row align-items-center  p-4">
+       <div class="col-md-2">
+        <p class="h3 text-primary">UniShop</p>
+
+      <a href="index.html">
+        <img src="images/UniShop_logo.png" alt="UniShop - Your Campus Store" class="img-fluid"/>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <form action="https://httpbin.org/get" method="get" onsubmit="return validateSearch()">
+          <div class="row">
+                        <div class="col-8">
+        <input type="text" id="searchInput" name="query" class="form-control"/>
+        </div>
+        <div class="col-4">
+
+        <input type="submit" value="Search" class="btn btn-primary"/>
+      </div>
+      </div>
+      </form>
+    </div>
+    <div class="col-md-4 text-end">
+      <a class="btn btn-outline-primary" href="login_and_registration.html">Login / Register</a>
+      <a class="btn btn-outline-primary fs-4" href="cart.html" >
+        🛒
+        <span class="text-danger">0</span>
+      </a>
+    </div>
+    </div>
+    </header>
+       <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+           <div class="container-fluid">
+      <div class="navbar-nav">
+
+      <a class="nav-link"  href="index.html">Home</a>
+          
+            <a class="nav-link " href="About_us.html">About Us</a>
+           
+            <a  class="nav-link" href="academic_supplies.html">Academic Supplies</a>
+           
+            <a class="nav-link"  href="medical-items.html">Medical & Laboratory Items</a>
+          
+            <a  class="nav-link" href="contact_us.html">Contact Us</a>
+            <a  class="nav-link" href="cart.html">My Cart</a>
+            <a class="nav-link"  href="login_and_registration.html">Login</a>
+            <a  class="nav-link" href="order_tracking.html">Order Tracking</a>
+             <a  class="nav-link" href="questionnaire.html">Questionnaire</a>
+             <a  class="nav-link" href="calculator.html">Calculator</a>
+            <a  class="nav-link" href="funpage.html">Fun Page</a>
+             <a class="nav-link active" href="wish_list.php">Wish List</a>
+        </div>
+    </div>
+
+          </nav>
+          <div class="container mt-4 mb-4">
+
+    <h1 class="text-center mb-4">My Wish List</h1>
+    <p class="text-center">Here you can add and manage items you wish to buy from Unishop!🌠 </p>
+
+  <div class="container my-4">
+    <h2 class="mb-3">Academic Supplies</h2>
+
+  <h4 class="mt-4">Add academic item</h4>
+ <form method="post" action="add_wishlist.php">
+    <input type="text" name="item_name" class="form-control mb-2" placeholder="Item name">
+     <input type="text" name="price" class="form-control mb-2" placeholder="Item price">
+
+    <input type="hidden" name="category" value="Academic">
+
+    <button type="submit" class="btn btn-primary">
+        Add Academic Item to Wish List
+    </button>
+
+
+</form>
+
+</div>
+
+
+
+<div class="container my-4">
+    <h2 class="mb-3"> Medical and Laboratory Items</h2>
+
+      
+   
+  <h4 class="mt-4">Add Medical item</h4>
+  <form method="post" action="add_wishlist.php">
+    <input type="text" name="item_name" class="form-control mb-2" placeholder="Item name">
+     <input type="text" name="price" class="form-control mb-2" placeholder="Item price">
+
+    <input type="hidden" name="category" value="Medical">
+
+    <button type="submit" class="btn btn-success">
+        Add Medical Item to Wish List
+    </button>
+
+
+</form>
+
+    
+
+</div>
+</div>
+
+<div class="container my-4">
+<h2 class="mb-3">All Wish List Items</h2>
+<?php
+ $servername = "localhost";
+$username="root";
+$password = "";
+$dbname = "unishop";
+
+// create a connection 
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+
+// check the connection 
+if(!$conn){
+    die("Connection failed: " .mysqli_connect_error());
+}
+$sql="SELECT  * FROM wishlist";
+$result = mysqli_query($conn,$sql);
+
+ if(mysqli_num_rows($result)>0){
+    print "<table class='table table-bordered table-striped'> ";
+     print "<thead class='table-primary '> ";
+     print "<tr>";
+     print"<th>ID</th>";
+     print"<th>Item Name</th>";
+     print"<th>Price</th>";
+     print"<th>Category</th>";
+      print "</tr>";
+     print "</thead>";
+     print "<tbody>";
+     while($row =mysqli_fetch_assoc($result)){
+        print "<tr>";
+        print "<td>" .$row["id"] . "</td>";
+        print "<td>" .$row["item_name"] . "</td>";
+        print "<td>" .$row["price"] . "</td>";
+        print "<td>" .$row["category"] . "</td>";
+        print "<td>
+        <form method='post' action='delete_wishlist.php'>
+        <input type='hidden' name='id' value='".$row["id"]."'>
+        <button type='submit' class='btn btn-danger btn-sm'>Delete</button>
+        </form>
+        </td>";
+       
+        }
+        print "</tbody>";
+        print "</table>";
+
+    }else{
+        print "<p>There are no items in the wishlist </p>";
+    }
+mysqli_close($conn);
+?>
+      </div>
+<footer class="bg-primary text-white text-center py-3">
+  <p class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
+</footer>
+</body>
+</html>
