@@ -182,7 +182,7 @@
     echo "</div>";
 
     if ($db_ok) {
-        echo "<div class='alert alert-success mt-3 mb-0'>✅ Bill saved to database successfully.</div>";
+        echo "<div class='alert alert-success mt-3 mb-0'> Bill saved to database successfully.</div>";
     }
 
     echo "</div></div>";
