@@ -259,7 +259,42 @@ window.location.href="medical-items.html#syringe";
 
           document.getElementById("totalsSection").classList.remove("d-none");
         }
-
+        /**
+         * Collects all item/bill data and POSTs to bill_result.php for server-side processing.
+         * Must be called after calculateBill() has already run.
+         */
+        function submitToPhp() {
+          var qtyInputs = document.getElementsByName("item-qty");
+          var hasItem = false;
+          for (var i = 0; i < qtyInputs.length; i++) {
+            if ((parseInt(qtyInputs[i].value) || 0) > 0) { hasItem = true; break; }
+          }
+          if (!hasItem) { alert("Please select at least one item before submitting."); return; }
+ 
+          // Populate hidden age / promo / delivery
+          document.getElementById("hidden_age").value          = document.getElementById("customerAge").value || 0;
+          document.getElementById("hidden_promo").value        = promoDiscount;
+          var deliverySelect = document.getElementById("deliveryOption");
+          document.getElementById("hidden_delivery_fee").value   = deliverySelect.value;
+          document.getElementById("hidden_delivery_label").value = deliverySelect.options[deliverySelect.selectedIndex].text;
+ 
+          // Build hidden item inputs
+          var container = document.getElementById("hidden_items");
+          container.innerHTML = "";
+          for (var i = 0; i < qtyInputs.length; i++) {
+            var qty = parseInt(qtyInputs[i].value) || 0;
+            if (qty > 0) {
+              var row       = qtyInputs[i].parentNode.parentNode;
+              var itemName  = row.cells[0].textContent.trim();
+              var itemPrice = qtyInputs[i].getAttribute("data-price");
+              container.innerHTML +=
+                "<input type='hidden' name='item_name[]'  value='" + itemName  + "'>" +
+                "<input type='hidden' name='item_price[]' value='" + itemPrice + "'>" +
+                "<input type='hidden' name='item_qty[]'   value='" + qty       + "'>";
+            }
+          }
+          document.getElementById("billForm").submit();
+        }
         /**
          * Resets the entire calculator to its initial state.
          * Clears all quantities, age, promo code, and hides results.
@@ -342,7 +377,7 @@ window.location.href="medical-items.html#syringe";
           <a class="nav-link" href="questionnaire.html">Questionnaire</a>
           <a class="nav-link active" href="calculator.html">Calculator</a>
           <a class="nav-link" href="funpage.html">Fun Page</a>
-          <a class="nav-link " href="wish_list.html">Wish List</a>
+          <a class="nav-link " href="wish_list.php">Wish List</a>
         </div>
      </div>
   </div>
@@ -577,8 +612,17 @@ window.location.href="medical-items.html#syringe";
                 Total = After Discount + VAT + Delivery Fee
               </p>
             </div>
+            <form id="billForm" method="post" action="bill_result.php">
+                <input type="hidden" name="age"            id="hidden_age">
+                <input type="hidden" name="promo_discount" id="hidden_promo">
+                <input type="hidden" name="delivery_fee"   id="hidden_delivery_fee">
+                <input type="hidden" name="delivery_label" id="hidden_delivery_label">
+                <div id="hidden_items"></div>
+            </form>
 
             <div class="d-grid mt-3">
+              <button type="button" class="btn btn-success fw-bold"
+                      onclick="submitToPhp()">Submit Bill to Server</button>
               <button type="button" class="btn btn-outline-secondary fw-bold"
                       onclick="resetCalculator()">Reset</button>
             </div>
