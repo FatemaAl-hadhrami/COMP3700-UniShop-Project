@@ -64,7 +64,7 @@
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
            <div class="container-fluid">
-      <div class="navbar-nav">
+      <div class="navbar-nav  flex-wrap">
 
       <a class="nav-link"  href="index.html">Home</a>
           
