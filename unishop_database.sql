@@ -128,7 +128,7 @@ INSERT INTO messages (email, user, phone, request) VALUES
 ('khadija@squ.edu.om', 'Khadija al-Hashmi', 33334444, 'I missed the delivery time. Can I pick it up from somewhere else?');
 
 -- =====================================================
--- TABLE 5: responses  (INSERT target for questionnaire page)
+-- TABLE 6: responses  (INSERT target for questionnaire page)
 -- =====================================================
 DROP TABLE IF EXISTS responses;
 
@@ -168,6 +168,6 @@ SELECT 'wishlist', COUNT(*) FROM wishlist
 UNION ALL
 SELECT 'bills',    COUNT(*) FROM bills
 UNION ALL
-SELECT 'messages',  COUNT (*) FROM messages
+SELECT 'messages',  COUNT(*) FROM messages
 UNION ALL
-SELECT 'responses', COUNT (*) FROM responses;
+SELECT 'responses', COUNT(*) FROM responses;
