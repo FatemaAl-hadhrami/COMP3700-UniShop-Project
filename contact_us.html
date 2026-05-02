@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,35 +108,60 @@ window.location.href="medical-items.html#syringe";
     }
 
     function validform(){
+
         let emailadd = document.getElementById("email"); 
         let username = document.getElementById("name");
-        var customtext = document.getElementById("message");
+        var customtext = document.getElementById("request");
+        let phonenum = document.getElementById("phone");
+        document.getElementById("errorname").innerText="";
+        document.getElementById("erroremail").innerText="";
+        document.getElementById("errorphone").innerText="";
+        document.getElementById("errorreq").innerText="";
+
         if (emailadd.value == ""){
-            alert("Please enter a valid email address.")
+            document.getElementById("erroremail").innerText="Please enter an email address.";
+           
             emailadd.focus();
             return false;
         }
 
         if (emailadd.value.indexOf("@", 0) < 0){
-            alert("Please enter a valid email address.");
+            document.getElementById("erroremail").innerText="Please enter a valid email address.";
+           
             emailadd.focus();
             return false;
         }
 
         if (emailadd.value.indexOf(".", 0) < 0){
-            alert("Please enter a valid email address.");
+            document.getElementById("erroremail").innerText="Please enter a valid email address.";
+            
             emailadd.focus();
             return false;
         }
 
         if (username.value == ""){
-            alert("Please enter your full name.");
+            document.getElementById("errorname").innerText="Please enter your full name.";
+            
             username.focus();
             return false;
         }
+        if (phonenum.value == ""){
+            document.getElementById("errorphone").innerText="Please enter your phone number.";
+        
+            phonenum.focus();
+            return false;
+        }
+        if (!/^\d{8}$/.test(phonenum.value)){
+            document.getElementById("errorphone").innerText="Phone number must be 8 digits. Please enter a valid phone number.";
+       
+            phonenum.focus();
+            return false;
+        }
+
         
         if (customtext.value == ""){
-            alert("Please enter a message.");
+            document.getElementById("errorreq").innerText="Please enter a message.";
+             
             customtext.focus();
             return false;
         }
@@ -191,26 +217,34 @@ window.location.href="medical-items.html#syringe";
                 <a class="nav-link" href="calculator.html">Calculator</a>
                 <a class="nav-link" href="funpage.php">Fun Page</a>
                 <a class="nav-link" href="products.php">Products</a>
-                <a class="nav-link " href="wish_list.html">Wish List</a>
+                <a class="nav-link " href="wish_list.php">Wish List</a>
             </div>
         </div>
     </nav>
+    
     <div class="container mt-4 mb-4">
         <h1 class="container mt-4 mb-4 text-primary">Contact Us</h1>
         <br>
         <div class="form-container-box">
-            <form action="#" name="contactForm" onsubmit="return validform()">
+            <form action="addRequest.php" method="post" name="contactForm" onsubmit="return validform()">
                 <fieldset>
                     <legend>Contact Form</legend>
-                     <label for="user">Full Name:</label>
+                     <label for="name">Full Name:</label>
                     <div class="col-sm-8">
-                      <input type="text" name="user" id="name">
+                      <input type="text" name="name" id="name">
+                        <span id="errorname" style="color:red;"></span>
                     </div>
                     <br>
                     <label for="email">Email Address:</label>
                     <div class="col-sm-8">
-                      <input type="email" name="address" id="email">
+                      <input type="text" name="email" id="email">
+                      <span id="erroremail" style="color: red;"></span>
                     </div> <br> 
+                    <label for="phone"> Phone Number:</label>
+                    <div class="col-sm-8">
+                        <input type="text" name="phone" id="phone">
+                        <span id="errorphone" style="color: red;"></span>
+                    </div><br>
 
                     <div class="dropdown col-8" >
                         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="inquiry">Inquiry Type:</button>
@@ -219,11 +253,12 @@ window.location.href="medical-items.html#syringe";
                             <li value="order">Order Issue</li>
                             <li value="feedback">Feedback</li>
                         </ul>
+                    
                     </div>
                     <br>
                     <label>Message:</label>
-                    <input type="text" id ="message" name="message" aria-rowspan="3">
-            
+                    <input type="text" id ="request" name="request" aria-rowspan="3">
+                    <span id="errorreq" style="color: red;"></span>
                     <input type="submit" value="Send Message">
                 </fieldset>
             </form>
@@ -248,8 +283,13 @@ window.location.href="medical-items.html#syringe";
     
     </div>
 </div>
+
+
+    <br>
     <footer class="bg-primary text-white text-center py-3">
         <p  class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
     </footer>
+
+    
 </body>
 </html>
