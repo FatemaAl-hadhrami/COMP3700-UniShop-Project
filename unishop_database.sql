@@ -107,6 +107,57 @@ INSERT INTO bills (subtotal, discount_pct, discount_amount, delivery_fee, vat, t
 ( 4.000,  5.00, 0.200, 1.500, 0.190,  5.490, 24, 'Standard Delivery');
 
 -- =====================================================
+-- TABLE 5: messages  (INSERT target for contact us page)
+-- =====================================================
+DROP TABLE IF EXISTS messages;
+
+CREATE TABLE messages(
+    id              INT(6)        NOT NULL AUTO_INCREMENT, 
+    email           VARCHAR(100)  NOT NULL,
+    user            VARCHAR(100)  NOT NULL,
+    phone           VARCHAR(8)    NOT NULL,
+    request         VARCHAR(200)  NOT NULL,
+    PRIMARY KEY (id)
+);
+
+INSERT INTO messages (email, user, phone, request) VALUES
+('reem@squ.edu.om', 'Reem al-Hinai', 98765432, 'I would like a refund'),
+('ahmed@squ.edu.om', 'Ahmed al-Balushi', 01010101, 'How many locations do you deliver to?'),
+('malak@squ.edu.om', 'Malak al-Amri', 12345678, 'I want to change the delivery time'),
+('abdelrahman@squ.edu.om', 'Abdelrahman al Harthi', 12341234, 'Thank you for the swift delivery.'),
+('khadija@squ.edu.om', 'Khadija al-Hashmi', 33334444, 'I missed the delivery time. Can I pick it up from somewhere else?');
+
+-- =====================================================
+-- TABLE 5: responses  (INSERT target for questionnaire page)
+-- =====================================================
+DROP TABLE IF EXISTS responses;
+
+CREATE TABLE responses(
+    id                  INT(6)          NOT NULL AUTO_INCREMENT,
+    email               VARCHAR(100)    NOT NULL,
+    user                VARCHAR(100)    NOT NULL,
+    job                 VARCHAR(20)     NOT NULL,
+    gender              VARCHAR(20)     NOT NULL,
+    age_group           VARCHAR(10)     NOT NULL,
+    sources             VARCHAR(200),
+    layout_rating       VARCHAR(10)     NOT NULL,
+    navigation_rating   VARCHAR(10)     NOT NULL,
+    design_rating       VARCHAR(10)     NOT NULL,
+    product_rating      VARCHAR(10)     NOT NULL,
+    delivery_rating     VARCHAR(10)     NOT NULL,
+    services_rating     VARCHAR(10)     NOT NULL,
+    comment             VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO responses(email, user, job, gender, age_group, sources, layout_rating, design_rating, product_rating, delivery_rating, services_rating, comment) VALUES
+('reem@squ.edu.om', 'Reem Al Hinai', 'Student', 'Female', '18-25', 'Friends & Family, Social Media', 'Very Good', 'Good', 'Very Good', 'Good', 'Very Good', 'Very Good', 'Great website!'),
+('ahmed@squ.edu.om', 'Ahmed Al Balushi', 'Student', 'Male', '18-25', '', 'Good', 'Good', 'Good', 'Neutral', 'Good', 'Good', 'Good but can improve navigation'),
+('malak@squ.edu.om', 'Malak Al Amri', 'Academic Staff', 'Female', '25-40', 'Advertisement', 'Very Good', 'Very Good', 'Very Good', 'Very Good', 'Very Good', 'Very Good', 'Excellent experience'),
+('abdelrahman@squ.edu.om', 'Abdelrahman Al Harthi', 'Student', 'Male', '18-25', 'Friends & Family', 'Neutral', 'Neutral', 'Good', 'Neutral', 'Neutral', 'Neutral', 'Average service'),
+('khadija@squ.edu.om', 'Khadija Al Hashmi', 'Academic Staff', 'Female', '25-40', 'Event', 'Good', 'Very Good', 'Good', 'Good', 'Very Good', '4Good', 'Very satisfied overall');
+
+-- =====================================================
 -- Verify all tables
 -- =====================================================
 SELECT 'products' AS tbl, COUNT(*) AS total FROM products
