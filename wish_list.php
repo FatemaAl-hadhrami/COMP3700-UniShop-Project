@@ -162,6 +162,7 @@ window.location.href="medical-items.html#syringe";
              <a  class="nav-link" href="questionnaire.html">Questionnaire</a>
              <a  class="nav-link" href="calculator.html">Calculator</a>
             <a  class="nav-link" href="funpage.php">Fun Page</a>
+          <a class="nav-link" href="products.php">Products</a>
              <a class="nav-link active" href="wish_list.php">Wish List</a>
         </div>
     </div>
