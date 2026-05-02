@@ -43,12 +43,12 @@
                 <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
                 <a class="nav-link" href="medical-items.html">Medical &amp; Laboratory Items</a>
                 <a class="nav-link" href="contact_us.html">Contact Us</a>
-                <a class="nav-link" href="cart.html">My Cart</a>
+                <a class="nav-link" href="cart.php">My Cart</a>
                 <a class="nav-link" href="login_and_registration.html">Login</a>
                 <a class="nav-link active" href="order_tracking.html">Order Tracking</a>
                 <a class="nav-link" href="questionnaire.html">Questionnaire</a>
                 <a class="nav-link" href="calculator.html">Calculator</a>
-                <a class="nav-link" href="funpage.html">Fun Page</a>
+                <a class="nav-link" href="funpage.php">Fun Page</a>
                 <a class="nav-link" href="wish_list.php">Wish List</a>
             </div>
         </div>
