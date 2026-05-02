@@ -55,7 +55,7 @@
       <a class="nav-link" href="order_tracking.html">Order Tracking</a>
       <a class="nav-link" href="questionnaire.html">Questionnaire</a>
       <a class="nav-link" href="calculator.html">Calculator</a>
-      <a class="nav-link" href="funpage.php">Fun Page</a>
+      <a class="nav-link active" href="funpage.php">Fun Page</a>
       <a class="nav-link " href="wish_list.html">Wish List</a>
   </div>
   </div>
