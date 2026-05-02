@@ -62,29 +62,31 @@
 </header>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand bg-primary">
-  <div class="container-fluid px-4">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+           <div class="container-fluid">
+      <div class="navbar-nav">
 
-    <div class="navbar-nav w-100 d-flex justify-content-between">
-
-      <a class="nav-link text-white" href="index.php">Home</a>
-      <a class="nav-link text-white" href="About_us.php">About Us</a>
-      <a class="nav-link text-white" href="academic_supplies.php">Academic Supplies</a>
-      <a class="nav-link text-white" href="medical-items.php">Medical & Laboratory Items</a>
-      <a class="nav-link text-white" href="contact_us.php">Contact Us</a>
-      <a class="nav-link text-white" href="cart.php">My Cart</a>
-      <a class="nav-link text-white active" href="login_and_registration.php">Login</a>
-      <a class="nav-link text-white" href="order_tracking.php">Order Tracking</a>
-      <a class="nav-link text-white" href="questionnaire.php">Questionnaire</a>
-      <a class="nav-link text-white" href="calculator.php">Calculator</a>
-      <a class="nav-link text-white" href="funpage.php">Fun Page</a>
-      <a class="nav-link text-white" href="products.php">Products</a>
-      <a class="nav-link text-white" href="wish_list.php">Wish List</a>
-
+      <a class="nav-link"  href="index.html">Home</a>
+          
+            <a class="nav-link " href="About_us.html">About Us</a>
+           
+            <a  class="nav-link" href="academic_supplies.html">Academic Supplies</a>
+           
+            <a class="nav-link"  href="medical-items.html">Medical & Laboratory Items</a>
+          
+            <a  class="nav-link" href="contact_us.html">Contact Us</a>
+            <a  class="nav-link" href="cart.php">My Cart</a>
+            <a class="nav-link active"  href="login_and_registration.php">Login</a>
+            <a  class="nav-link" href="order_tracking.html">Order Tracking</a>
+             <a  class="nav-link" href="questionnaire.html">Questionnaire</a>
+             <a  class="nav-link" href="calculator.html">Calculator</a>
+            <a  class="nav-link" href="funpage.php">Fun Page</a>
+          <a class="nav-link" href="products.php">Products</a>
+             <a class="nav-link " href="wish_list.php">Wish List</a>
+        </div>
     </div>
 
-  </div>
-</nav>
+          </nav>
 
 <!-- ================= MAIN ================= -->
 <div class="container mt-5 mb-5">
