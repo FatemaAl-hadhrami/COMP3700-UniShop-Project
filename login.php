@@ -65,6 +65,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
         <a class="nav-link" href="questionnaire.php">Questionnaire</a>
         <a class="nav-link" href="calculator.php">Calculator</a>
         <a class="nav-link" href="funpage.php">Fun Page</a>
+        <a class="nav-link active" href="products.php">Products</a>
         <a class="nav-link" href="wish_list.php">Wish List</a>
       </div>
     </div>
