@@ -135,7 +135,7 @@ DROP TABLE IF EXISTS responses;
 CREATE TABLE responses(
     id                  INT(6)          NOT NULL AUTO_INCREMENT,
     email               VARCHAR(100)    NOT NULL,
-    user                VARCHAR(100)    NOT NULL,
+    name                VARCHAR(100)    NOT NULL,
     job                 VARCHAR(20)     NOT NULL,
     gender              VARCHAR(20)     NOT NULL,
     age_group           VARCHAR(10)     NOT NULL,
@@ -150,12 +150,12 @@ CREATE TABLE responses(
     PRIMARY KEY (id)
 );
 
-INSERT INTO responses(email, user, job, gender, age_group, sources, layout_rating, design_rating, product_rating, delivery_rating, services_rating, comment) VALUES
+INSERT INTO responses(email, name, job, gender, age_group, sources, layout_rating, navigation_rating, design_rating, product_rating, delivery_rating, services_rating, comment) VALUES
 ('reem@squ.edu.om', 'Reem Al Hinai', 'Student', 'Female', '18-25', 'Friends & Family, Social Media', 'Very Good', 'Good', 'Very Good', 'Good', 'Very Good', 'Very Good', 'Great website!'),
 ('ahmed@squ.edu.om', 'Ahmed Al Balushi', 'Student', 'Male', '18-25', '', 'Good', 'Good', 'Good', 'Neutral', 'Good', 'Good', 'Good but can improve navigation'),
 ('malak@squ.edu.om', 'Malak Al Amri', 'Academic Staff', 'Female', '25-40', 'Advertisement', 'Very Good', 'Very Good', 'Very Good', 'Very Good', 'Very Good', 'Very Good', 'Excellent experience'),
 ('abdelrahman@squ.edu.om', 'Abdelrahman Al Harthi', 'Student', 'Male', '18-25', 'Friends & Family', 'Neutral', 'Neutral', 'Good', 'Neutral', 'Neutral', 'Neutral', 'Average service'),
-('khadija@squ.edu.om', 'Khadija Al Hashmi', 'Academic Staff', 'Female', '25-40', 'Event', 'Good', 'Very Good', 'Good', 'Good', 'Very Good', '4Good', 'Very satisfied overall');
+('khadija@squ.edu.om', 'Khadija Al Hashmi', 'Academic Staff', 'Female', '25-40', 'Event', 'Good', 'Very Good', 'Good', 'Good', 'Very Good', 'Good', 'Very satisfied overall');
 
 -- =====================================================
 -- Verify all tables
