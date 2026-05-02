@@ -56,6 +56,7 @@
       <a class="nav-link" href="questionnaire.html">Questionnaire</a>
       <a class="nav-link" href="calculator.html">Calculator</a>
       <a class="nav-link active" href="funpage.php">Fun Page</a>
+      <a class="nav-link active" href="products.php">Products</a>
       <a class="nav-link " href="wish_list.html">Wish List</a>
   </div>
   </div>
