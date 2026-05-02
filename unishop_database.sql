@@ -78,12 +78,7 @@ CREATE TABLE wishlist (
     PRIMARY KEY (id)
 );
 
-INSERT INTO wishlist (item_name, price, category) VALUES
-('Stethoscope',                 18.000, 'Medical'),
-('fx-9911ES PLUS Calculator',    4.000, 'Academic'),
-('Lab Coat (White)',            15.000, 'Medical'),
-('Pack of 4 Notebooks',          1.200, 'Academic'),
-('Latex Gloves (box of 100)',    3.200, 'Medical');
+
 
 -- =====================================================
 -- TABLE 4: bills  (INSERT target for calculator page)
