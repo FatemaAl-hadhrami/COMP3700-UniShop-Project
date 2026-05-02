@@ -221,7 +221,7 @@ window.location.href="medical-items.html#syringe";
       //indicate if "other" textbox does not contain any word characters
         if ((otherContent.value != "")&&(otherContent.value.search(/\w+/)==-1)){
           
-          otherContent.innerHTML += ("<span='color:red'> Please enter valid (word) characters.");
+          document.getElementById("errorother").innerText = "Please enter valid (word) characters.";
           otherContent.focus();
           return false;
         }
