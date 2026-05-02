@@ -46,7 +46,7 @@
 </header>
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
-  <div class="container-fluid">
+  <div class="container-fluid  flex-wrap">
     <div class="navbar-nav">
       <a class="nav-link" href="index.html">Home</a>
       <a class="nav-link" href="About_us.html">About Us</a>
