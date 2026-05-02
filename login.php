@@ -60,7 +60,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
         <a class="nav-link" href="medical-items.php">Medical & Laboratory Items</a>
         <a class="nav-link" href="contact_us.php">Contact Us</a>
         <a class="nav-link" href="cart.php">My Cart</a>
-        <a class="nav-link" href="login_and_registration.php">Login</a>
+        <a class="nav-link active" href="login_and_registration.php">Login</a>
         <a class="nav-link" href="order_tracking.php">Order Tracking</a>
         <a class="nav-link" href="questionnaire.php">Questionnaire</a>
         <a class="nav-link" href="calculator.php">Calculator</a>
