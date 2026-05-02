@@ -80,6 +80,7 @@ class User {
       <a class="nav-link text-white" href="questionnaire.php">Questionnaire</a>
       <a class="nav-link text-white" href="calculator.php">Calculator</a>
       <a class="nav-link text-white" href="funpage.php">Fun Page</a>
+        <a class="nav-link text-white" href="products.php">Products</a>
       <a class="nav-link text-white" href="wish_list.php">Wish List</a>
     </div>
 
