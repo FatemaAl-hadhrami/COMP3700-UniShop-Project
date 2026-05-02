@@ -73,7 +73,7 @@
       <a class="nav-link text-white" href="medical-items.php">Medical & Laboratory Items</a>
       <a class="nav-link text-white" href="contact_us.php">Contact Us</a>
       <a class="nav-link text-white" href="cart.php">My Cart</a>
-      <a class="nav-link text-white" href="login_and_registration.php">Login</a>
+      <a class="nav-link text-white active" href="login_and_registration.php">Login</a>
       <a class="nav-link text-white" href="order_tracking.php">Order Tracking</a>
       <a class="nav-link text-white" href="questionnaire.php">Questionnaire</a>
       <a class="nav-link text-white" href="calculator.php">Calculator</a>
