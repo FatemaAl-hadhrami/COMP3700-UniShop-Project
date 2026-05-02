@@ -332,7 +332,7 @@ window.location.href="medical-items.html#syringe";
     $myComment = $_POST['comment'];
 
     //add to table
-    $sql = "insert into responses (email, user, job, gender, age_group, sources, layout_rating, navigation_rating, design_rating, product_rating, delivery_rating, services_rating, comment)
+    $sql = "insert into responses (email, name, job, gender, age_group, sources, layout_rating, navigation_rating, design_rating, product_rating, delivery_rating, services_rating, comment)
             values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param( $stmt,
