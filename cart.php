@@ -72,7 +72,7 @@
       <a class="nav-link" href="calculator.html">Calculator</a>
       <a class="nav-link" href="funpage.html">Fun Page</a>
       <a class="nav-link" href="products.php">Products</a>
-      <a class="nav-link " href="wish_list.html">Wish List</a>
+      <a class="nav-link " href="wish_list.php">Wish List</a>
     </div>
   </div>
 </nav>
