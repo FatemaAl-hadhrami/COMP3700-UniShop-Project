@@ -157,6 +157,25 @@ INSERT INTO responses(email, name, job, gender, age_group, sources, layout_ratin
 ('abdelrahman@squ.edu.om', 'Abdelrahman Al Harthi', 'Student', 'Male', '18-25', 'Friends & Family', 'Neutral', 'Neutral', 'Good', 'Neutral', 'Neutral', 'Neutral', 'Average service'),
 ('khadija@squ.edu.om', 'Khadija Al Hashmi', 'Academic Staff', 'Female', '25-40', 'Event', 'Good', 'Very Good', 'Good', 'Good', 'Very Good', 'Good', 'Very satisfied overall');
 
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    phone VARCHAR(20) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    college VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO users (fullname, username, phone, password, college)
+VALUES 
+('Ali Ahmed', 'ali1', '96891234567', '123456', 'Engineering'),
+('Sara Ali', 'sara2', '96899887766', 'abc123', 'Science'),
+('Omar Khalid', 'omar3', '96891122334', 'pass123', 'Medicine'),
+('Noor Salem', 'noor4', '96890011223', '123abc', 'Engineering'),
+('Huda Nasser', 'huda5', '96895566778', 'huda123', 'Science');
 -- =====================================================
 -- Verify all tables
 -- =====================================================
@@ -171,3 +190,5 @@ UNION ALL
 SELECT 'messages',  COUNT(*) FROM messages
 UNION ALL
 SELECT 'responses', COUNT(*) FROM responses;
+UNION ALL
+SELECT 'users',    COUNT(*) FROM users;
