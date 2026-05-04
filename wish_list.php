@@ -136,7 +136,7 @@ window.location.href="medical-items.html#syringe";
     </div>
     <div class="col-md-4 text-end">
       <a class="btn btn-outline-primary" href="login_and_registration.html">Login / Register</a>
-      <a class="btn btn-outline-primary fs-4" href="cart.html" >
+      <a class="btn btn-outline-primary fs-4" href="cart.php" >
         🛒
         <span class="text-danger">0</span>
       </a>
