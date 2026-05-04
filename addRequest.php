@@ -165,14 +165,14 @@ window.location.href="medical-items.html#syringe";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     //check connection
     if(!$conn){ die("Connection failed: " . mysqli_connect_error());}
-    else{print "Connection successful. <br>";}
+    
 
     //adding a message to messages
     $sql = "INSERT INTO messages (email, user, phone, request) VALUES ('$myEmail', '$myName', '$myPhone', '$myMessage');";
     $result = mysqli_query($conn, $sql);
     //close connection to database 
     mysqli_close($conn);
-    print("<p> Your request has been successfully registered. </p>");
+    print("<p style="background-color: lightgreen;"> Your request has been successfully registered. </p>");
 
     ?>
     <br>
