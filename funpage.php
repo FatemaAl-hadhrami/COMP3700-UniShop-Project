@@ -64,7 +64,7 @@
       <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
       <a class="nav-link" href="medical-items.html">Medical & Laboratory Items</a>
       <a class="nav-link" href="contact_us.html">Contact Us</a>
-      <a class="nav-link" href="cart.html">My Cart</a>
+      <a class="nav-link" href="cart.php">My Cart</a>
       <a class="nav-link" href="login_and_registration.php">Login</a>
       <a class="nav-link" href="order_tracking.html">Order Tracking</a>
       <a class="nav-link" href="questionnaire.html">Questionnaire</a>
