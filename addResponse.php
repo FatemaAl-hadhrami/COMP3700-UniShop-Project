@@ -339,7 +339,7 @@ window.location.href="medical-items.html#syringe";
         "sssssssssssss", $myEmail, $myUser, $myJob, $myGender, $myAge, $mySources, $myLayout, $myNavigation, $myDesign, $myProducts, $myDelivery, $myServices, $myComment
     );
     if (mysqli_stmt_execute($stmt)){
-        echo "<h1>Your response has been saved successfully. Thank you!</h1>";
+        echo "<p style='background-color: lightgreen;'>Your response has been saved successfully. Thank you!</p>";
     } else {echo "<h1 class='text-danger text-center'>Error: " . mysqli_error($conn) . "</h1>";}
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
