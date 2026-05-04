@@ -19,41 +19,43 @@
 
 <body class="bg-light">
 
-<!-- ================= HEADER ================= -->
-<header class="container-fluid bg-white border-bottom">
-  <div class="row align-items-center py-3 px-4">
+<!-- ================= HEADER (MATCH WISHLIST STYLE) ================= -->
+<header class="container-fluid bg-white">
+  <div class="row align-items-center p-4">
 
     <!-- LOGO -->
-    <div class="col-md-3 d-flex align-items-center">
-      <a href="index.php" class="d-flex align-items-center text-decoration-none">
-        <img src="images/UniShop_logo.png" style="height:70px;">
+    <div class="col-md-2">
+      <p class="h3 text-primary mb-1">UniShop</p>
+
+      <a href="index.php">
+        <img src="images/UniShop_logo.png" class="img-fluid">
       </a>
     </div>
 
     <!-- SEARCH -->
     <div class="col-md-6">
       <form onsubmit="return validateSearch()">
-        <div class="row g-2">
-          <div class="col-9">
-            <input type="text" id="searchInput" class="form-control" placeholder="Search...">
+        <div class="row">
+          <div class="col-8">
+           
+            <input type="text" id="searchInput" class="form-control">
           </div>
-          <div class="col-3">
-            <button class="btn btn-primary w-100">Search</button>
+          <div class="col-4">
+            <input type="submit" value="Search" class="btn btn-primary w-100">
           </div>
         </div>
       </form>
     </div>
 
-    <!-- LOGIN + CART -->
-    <div class="col-md-3 d-flex justify-content-end align-items-center gap-2">
+    
+    <div class="col-md-4 text-end">
 
       <a href="login_and_registration.php" class="btn btn-outline-primary">
         Login / Register
       </a>
 
-      <a href="cart.php" class="btn btn-outline-primary position-relative">
-        🛒
-        <span class="text-danger">0</span>
+      <a href="cart.php" class="btn btn-outline-primary fs-4">
+        🛒 <span class="text-danger">0</span>
       </a>
 
     </div>
@@ -75,12 +77,12 @@
             <a class="nav-link"  href="medical-items.html">Medical & Laboratory Items</a>
           
             <a  class="nav-link" href="contact_us.html">Contact Us</a>
-            <a  class="nav-link" href="cart.php">My Cart</a>
+            <a  class="nav-link" href="cart.html">My Cart</a>
             <a class="nav-link active"  href="login_and_registration.php">Login</a>
             <a  class="nav-link" href="order_tracking.html">Order Tracking</a>
              <a  class="nav-link" href="questionnaire.html">Questionnaire</a>
              <a  class="nav-link" href="calculator.html">Calculator</a>
-            <a  class="nav-link" href="funpage.php">Fun Page</a>
+            <a  class="nav-link" href="funpage.html">Fun Page</a>
           <a class="nav-link" href="products.php">Products</a>
              <a class="nav-link " href="wish_list.php">Wish List</a>
         </div>
@@ -130,6 +132,8 @@
           </select>
 
           <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+
+          <input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control mb-2" required>
 
           <button class="btn btn-success w-100">Register</button>
 
