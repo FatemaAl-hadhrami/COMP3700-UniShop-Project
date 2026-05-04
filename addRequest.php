@@ -172,7 +172,7 @@ window.location.href="medical-items.html#syringe";
     $result = mysqli_query($conn, $sql);
     //close connection to database 
     mysqli_close($conn);
-    print("<p style="background-color: lightgreen;"> Your request has been successfully registered. </p>");
+    print("<p style='background-color: lightgreen;'> Your request has been successfully registered. </p>");
 
     ?>
     <br>
