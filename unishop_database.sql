@@ -187,8 +187,8 @@ SELECT 'wishlist', COUNT(*) FROM wishlist
 UNION ALL
 SELECT 'bills',    COUNT(*) FROM bills
 UNION ALL
-SELECT 'messages',  COUNT(*) FROM messages
+SELECT 'messages', COUNT(*) FROM messages
 UNION ALL
-SELECT 'responses', COUNT(*) FROM responses;
+SELECT 'responses', COUNT(*) FROM responses
 UNION ALL
 SELECT 'users',    COUNT(*) FROM users;
