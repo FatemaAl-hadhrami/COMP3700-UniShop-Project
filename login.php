@@ -18,35 +18,48 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
 </head>
 <body class="bg-light">
 
-<header class="container-fluid bg-white border-bottom shadow-sm">
-  <div class="row align-items-center p-3">
-    <div class="col-md-3 d-flex align-items-center">
-      <a href="index.php" class="text-decoration-none d-flex align-items-center">
-        <img src="images/UniShop_logo.png" alt="Logo">
-        <span class="ms-3 h3 text-primary mb-0 fw-bold">UniShop</span>
+<header class="container-fluid bg-white">
+  <div class="row align-items-center p-4">
+
+    <!-- LOGO -->
+    <div class="col-md-2">
+      <p class="h3 text-primary mb-1">UniShop</p>
+
+      <a href="index.php">
+        <img src="images/UniShop_logo.png" class="img-fluid">
       </a>
     </div>
 
+    <!-- SEARCH -->
     <div class="col-md-6">
-      <form action="search.php" method="GET" onsubmit="return validateSearch()">
-        <div class="input-group">
-          <input type="text" id="searchInput" name="query" class="form-control form-control-lg border-2 border-primary" placeholder="Search product category...">
-          <button class="btn btn-primary btn-lg px-4" type="submit">Search</button>
+      <form onsubmit="return validateSearch()">
+        <div class="row">
+          <div class="col-8">
+            
+            <input type="text" id="searchInput" class="form-control">
+          </div>
+          <div class="col-4">
+            <input type="submit" value="Search" class="btn btn-primary"/>
+          </div>
         </div>
       </form>
     </div>
 
-    <div class="col-md-3 d-flex align-items-center justify-content-end gap-2">
-      <a href="login_and_registration.php" class="btn btn-outline-primary btn-lg px-3">Login / Register</a>
-      
-      <a href="cart.php" class="btn btn-outline-primary btn-lg position-relative px-3 bg-white text-primary">
-        🛒
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+    
+    <div class="col-md-4 text-end">
+
+      <a href="login_and_registration.php" class="btn btn-outline-primary">
+        Login / Register
       </a>
+
+      <a href="cart.php" class="btn btn-outline-primary fs-4">
+        🛒 <span class="text-danger">0</span>
+      </a>
+
     </div>
+
   </div>
 </header>
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
@@ -59,12 +72,12 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
         <a class="nav-link" href="academic_supplies.php">Academic Supplies</a>
         <a class="nav-link" href="medical-items.php">Medical & Laboratory Items</a>
         <a class="nav-link" href="contact_us.php">Contact Us</a>
-        <a class="nav-link" href="cart.php">My Cart</a>
+        <a class="nav-link" href="cart.html">My Cart</a>
         <a class="nav-link active" href="login_and_registration.php">Login</a>
         <a class="nav-link" href="order_tracking.php">Order Tracking</a>
         <a class="nav-link" href="questionnaire.php">Questionnaire</a>
         <a class="nav-link" href="calculator.php">Calculator</a>
-        <a class="nav-link" href="funpage.php">Fun Page</a>
+        <a class="nav-link" href="funpage.html">Fun Page</a>
         <a class="nav-link " href="products.php">Products</a>
         <a class="nav-link" href="wish_list.php">Wish List</a>
       </div>
@@ -72,7 +85,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
   </div>
 </nav>
 
-<div class="container mt-5">
+<div class="container mt-5" >
     <div class="row justify-content-center">
         <div class="col-md-8">
             <?php
@@ -114,6 +127,8 @@ function validateSearch(){
     return true;
 }
 </script>
-
+<footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0">&copy; 2026 UniShop. All rights reserved.</p>
+</footer>
 </body>
 </html>
