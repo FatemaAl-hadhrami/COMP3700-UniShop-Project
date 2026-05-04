@@ -76,7 +76,7 @@ class User {
       <a class="nav-link text-white" href="academic_supplies.php">Academic Supplies</a>
       <a class="nav-link text-white" href="medical-items.php">Medical & Laboratory Items</a>
       <a class="nav-link text-white" href="contact_us.php">Contact Us</a>
-      <a class="nav-link text-white" href="cart.html">My Cart</a>
+      <a class="nav-link text-white" href="cart.php">My Cart</a>
       <a class="nav-link text-white active" href="login_and_registration.php">Login</a>
       <a class="nav-link text-white" href="order_tracking.php">Order Tracking</a>
       <a class="nav-link text-white" href="questionnaire.php">Questionnaire</a>
