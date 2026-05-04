@@ -11,33 +11,47 @@
 
 <body class="bg-light">
 
-<!-- ================= HEADER ================= -->
+
 <header class="container-fluid bg-white">
   <div class="row align-items-center p-4">
+
+    <!-- LOGO -->
     <div class="col-md-2">
-      <p class="h3 text-primary">UniShop</p>
-      <a href="index.html">
+      <p class="h3 text-primary mb-1">UniShop</p>
+
+      <a href="index.php">
         <img src="images/UniShop_logo.png" class="img-fluid">
       </a>
     </div>
-<!--Search Part -->
-    <div class="col-md-6">
-  <form onsubmit="return validateSearch()">
-    <div class="row">
-      <div class="col-8">
-        <input type="text" id="searchInput" class="form-control" placeholder="Search...">
-      </div>
-      <div class="col-4">
-        <input type="submit" value="Search" class="btn btn-primary w-100">
-      </div>
-    </div>
-  </form>
-</div>
 
-    <div class="col-md-4 text-end">
-      <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
-      <a href="cart.html" class="btn btn-outline-primary fs-4">🛒 <span>0</span></a>
+    <!-- SEARCH -->
+    <div class="col-md-6">
+      <form onsubmit="return validateSearch()">
+        <div class="row">
+          <div class="col-8">
+            
+            <input type="text" id="searchInput" class="form-control">
+          </div>
+          <div class="col-4">
+            <input type="submit" value="Search" class="btn btn-outline-primary">
+          </div>
+        </div>
+      </form>
     </div>
+
+    
+    <div class="col-md-4 text-end">
+
+      <a href="login_and_registration.php" class="btn btn-outline-primary">
+        Login / Register
+      </a>
+
+      <a href="cart.php" class="btn btn-outline-primary fs-4">
+        🛒 <span class="text-danger">0</span>
+      </a>
+
+    </div>
+
   </div>
 </header>
 
@@ -50,12 +64,12 @@
       <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
       <a class="nav-link" href="medical-items.html">Medical & Laboratory Items</a>
       <a class="nav-link" href="contact_us.html">Contact Us</a>
-      <a class="nav-link" href="cart.php">My Cart</a>
+      <a class="nav-link" href="cart.html">My Cart</a>
       <a class="nav-link" href="login_and_registration.php">Login</a>
       <a class="nav-link" href="order_tracking.html">Order Tracking</a>
       <a class="nav-link" href="questionnaire.html">Questionnaire</a>
       <a class="nav-link" href="calculator.html">Calculator</a>
-      <a class="nav-link active" href="funpage.php">Fun Page</a>
+      <a class="nav-link active" href="funpage.html">Fun Page</a>
       <a class="nav-link " href="products.php">Products</a>
       <a class="nav-link " href="wish_list.php">Wish List</a>
   </div>
