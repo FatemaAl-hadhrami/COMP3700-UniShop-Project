@@ -16,38 +16,50 @@
 
 <header class="container-fluid bg-white">
   <div class="row align-items-center p-4">
+
+    <!-- LOGO -->
     <div class="col-md-2">
-      <p class="h3 text-primary">UniShop</p>
-      <a href="index.html">
+      <p class="h3 text-primary mb-1">UniShop</p>
+
+      <a href="index.php">
         <img src="images/UniShop_logo.png" class="img-fluid">
       </a>
     </div>
-    
+
+    <!-- SEARCH -->
     <div class="col-md-6">
       <form onsubmit="return validateSearch()">
         <div class="row">
           <div class="col-8">
-            <input type="text" id="headerSearch" class="form-control" placeholder="Search...">
+            
+            <input type="text" id="searchInput" class="form-control">
           </div>
           <div class="col-4">
-            <input type="submit" value="Search" class="btn btn-primary w-100">
+            <input type="submit" value="Search" class="btn btn-outline-primary">
           </div>
         </div>
       </form>
     </div>
 
+    
     <div class="col-md-4 text-end">
-      <a href="login_and_registration.html" class="btn btn-outline-primary">Login / Register</a>
-      <a href="cart.html" class="btn btn-outline-primary fs-4">
-        🛒 <span class="text-danger" id="cartCount">0</span>
+
+      <a href="login_and_registration.php" class="btn btn-outline-primary">
+        Login / Register
       </a>
+
+      <a href="cart.php" class="btn btn-outline-primary fs-4">
+        🛒 <span class="text-danger">0</span>
+      </a>
+
     </div>
+
   </div>
 </header>
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <div class="container-fluid">
-    <div class="navbar-nav flex-wrap">
+    <div class="navbar-nav  flex-wrap">
       <a class="nav-link" href="index.html">Home</a>
       <a class="nav-link" href="About_us.html">About Us</a>
       <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
@@ -58,7 +70,7 @@
       <a class="nav-link" href="order_tracking.html">Order Tracking</a>
       <a class="nav-link" href="questionnaire.html">Questionnaire</a>
       <a class="nav-link" href="calculator.html">Calculator</a>
-      <a class="nav-link" href="funpage.php">Fun Page</a>
+      <a class="nav-link" href="funpage.html">Fun Page</a>
       <a class="nav-link" href="products.php">Products</a>
       <a class="nav-link " href="wish_list.html">Wish List</a>
     </div>
