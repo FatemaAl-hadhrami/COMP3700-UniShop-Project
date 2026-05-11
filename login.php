@@ -67,16 +67,16 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="mainNav">
       <div class="navbar-nav">
-        <a class="nav-link" href="index.php">Home</a>
-        <a class="nav-link" href="About_us.php">About Us</a>
-        <a class="nav-link" href="academic_supplies.php">Academic Supplies</a>
-        <a class="nav-link" href="medical-items.php">Medical & Laboratory Items</a>
-        <a class="nav-link" href="contact_us.php">Contact Us</a>
+        <a class="nav-link" href="Index.html">Home</a>
+        <a class="nav-link" href="About_us.html">About Us</a>
+        <a class="nav-link" href="academic_supplies.html">Academic Supplies</a>
+        <a class="nav-link" href="medical-items.html">Medical & Laboratory Items</a>
+        <a class="nav-link" href="contact_us.html">Contact Us</a>
         <a class="nav-link" href="cart.php">My Cart</a>
         <a class="nav-link active" href="login_and_registration.php">Login</a>
-        <a class="nav-link" href="order_tracking.php">Order Tracking</a>
-        <a class="nav-link" href="questionnaire.php">Questionnaire</a>
-        <a class="nav-link" href="calculator.php">Calculator</a>
+        <a class="nav-link" href="order_tracking.html">Order Tracking</a>
+        <a class="nav-link" href="questionnaire.html">Questionnaire</a>
+        <a class="nav-link" href="calculator.html">Calculator</a>
         <a class="nav-link" href="funpage.php">Fun Page</a>
         <a class="nav-link " href="products.php">Products</a>
         <a class="nav-link" href="wish_list.php">Wish List</a>
@@ -101,7 +101,7 @@ if ($conn->connect_error) { die("Connection failed: " . $conn->connect_error); }
                     echo "<div class='alert alert-white border border-success border-3 p-5 shadow-sm text-center bg-white'>
                             <h2 class='text-success fw-bold'>Welcome back, " . htmlspecialchars($user['fullname']) . "!</h2>
                             <p class='lead'>Login successful. Redirecting to your dashboard...</p>
-                            <a href='index.php' class='btn btn-success btn-lg mt-3'>Go to Store</a>
+                            <a href='index.html' class='btn btn-success btn-lg mt-3'>Go to Store</a>
                           </div>";
                 } else {
                     
