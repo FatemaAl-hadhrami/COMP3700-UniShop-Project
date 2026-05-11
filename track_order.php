@@ -23,7 +23,7 @@
             </a>
         </div>
         <div class="col-md-4 text-end ms-auto">
-            <a class="btn btn-outline-primary" href="login_and_registration.html">Login / Register</a>
+            <a class="btn btn-outline-primary" href="login_and_registration.php">Login / Register</a>
         </div>
     </div>
 </header>
