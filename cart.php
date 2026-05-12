@@ -107,7 +107,7 @@
 
   <div class="row mt-4 align-items-center">
     <div class="col-md-6">
-        <a href="calculator.html" class="btn btn-outline-secondary">← Back to Shopping</a>
+        <a href="academic_supplies.html" class="btn btn-outline-secondary">← Back to Shopping</a>
     </div>
     <div class="col-md-6 text-end">
         <h4>Grand Total: <span id="grandTotal" class="text-primary">0</span> OMR</h4>
@@ -164,7 +164,7 @@ function displayCart(data) {
             "</tr>";
     }
 
-    document.getElementById("grandTotal").innerHTML = total;
+    document.getElementById("grandTotal").innerHTML = total.toFixed(3);
     document.getElementById("cartCount").innerHTML = cart.length;
 }
 
